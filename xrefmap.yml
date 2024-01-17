@@ -1,0 +1,468 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: NativeLand
+  name: NativeLand
+  href: api/NativeLand.html
+  commentId: N:NativeLand
+  fullName: NativeLand
+  nameWithType: NativeLand
+- uid: NativeLand.Exceptions
+  name: NativeLand.Exceptions
+  href: api/NativeLand.Exceptions.html
+  commentId: N:NativeLand.Exceptions
+  fullName: NativeLand.Exceptions
+  nameWithType: NativeLand.Exceptions
+- uid: NativeLand.Exceptions.NoBinaryForPlatformException
+  name: NoBinaryForPlatformException
+  href: api/NativeLand.Exceptions.NoBinaryForPlatformException.html
+  commentId: T:NativeLand.Exceptions.NoBinaryForPlatformException
+  fullName: NativeLand.Exceptions.NoBinaryForPlatformException
+  nameWithType: NoBinaryForPlatformException
+- uid: NativeLand.Exceptions.NoBinaryForPlatformException.#ctor
+  name: NoBinaryForPlatformException()
+  href: api/NativeLand.Exceptions.NoBinaryForPlatformException.html#NativeLand_Exceptions_NoBinaryForPlatformException__ctor
+  commentId: M:NativeLand.Exceptions.NoBinaryForPlatformException.#ctor
+  name.vb: New()
+  fullName: NativeLand.Exceptions.NoBinaryForPlatformException.NoBinaryForPlatformException()
+  fullName.vb: NativeLand.Exceptions.NoBinaryForPlatformException.New()
+  nameWithType: NoBinaryForPlatformException.NoBinaryForPlatformException()
+  nameWithType.vb: NoBinaryForPlatformException.New()
+- uid: NativeLand.Exceptions.NoBinaryForPlatformException.#ctor(System.String)
+  name: NoBinaryForPlatformException(string)
+  href: api/NativeLand.Exceptions.NoBinaryForPlatformException.html#NativeLand_Exceptions_NoBinaryForPlatformException__ctor_System_String_
+  commentId: M:NativeLand.Exceptions.NoBinaryForPlatformException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: NativeLand.Exceptions.NoBinaryForPlatformException.NoBinaryForPlatformException(string)
+  fullName.vb: NativeLand.Exceptions.NoBinaryForPlatformException.New(String)
+  nameWithType: NoBinaryForPlatformException.NoBinaryForPlatformException(string)
+  nameWithType.vb: NoBinaryForPlatformException.New(String)
+- uid: NativeLand.Exceptions.NoBinaryForPlatformException.#ctor(System.String,System.Exception)
+  name: NoBinaryForPlatformException(string, Exception)
+  href: api/NativeLand.Exceptions.NoBinaryForPlatformException.html#NativeLand_Exceptions_NoBinaryForPlatformException__ctor_System_String_System_Exception_
+  commentId: M:NativeLand.Exceptions.NoBinaryForPlatformException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: NativeLand.Exceptions.NoBinaryForPlatformException.NoBinaryForPlatformException(string, System.Exception)
+  fullName.vb: NativeLand.Exceptions.NoBinaryForPlatformException.New(String, System.Exception)
+  nameWithType: NoBinaryForPlatformException.NoBinaryForPlatformException(string, Exception)
+  nameWithType.vb: NoBinaryForPlatformException.New(String, Exception)
+- uid: NativeLand.Exceptions.NoBinaryForPlatformException.#ctor*
+  name: NoBinaryForPlatformException
+  href: api/NativeLand.Exceptions.NoBinaryForPlatformException.html#NativeLand_Exceptions_NoBinaryForPlatformException__ctor_
+  commentId: Overload:NativeLand.Exceptions.NoBinaryForPlatformException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NativeLand.Exceptions.NoBinaryForPlatformException.NoBinaryForPlatformException
+  fullName.vb: NativeLand.Exceptions.NoBinaryForPlatformException.New
+  nameWithType: NoBinaryForPlatformException.NoBinaryForPlatformException
+  nameWithType.vb: NoBinaryForPlatformException.New
+- uid: NativeLand.Exceptions.UnsupportedPlatformException
+  name: UnsupportedPlatformException
+  href: api/NativeLand.Exceptions.UnsupportedPlatformException.html
+  commentId: T:NativeLand.Exceptions.UnsupportedPlatformException
+  fullName: NativeLand.Exceptions.UnsupportedPlatformException
+  nameWithType: UnsupportedPlatformException
+- uid: NativeLand.Exceptions.UnsupportedPlatformException.#ctor
+  name: UnsupportedPlatformException()
+  href: api/NativeLand.Exceptions.UnsupportedPlatformException.html#NativeLand_Exceptions_UnsupportedPlatformException__ctor
+  commentId: M:NativeLand.Exceptions.UnsupportedPlatformException.#ctor
+  name.vb: New()
+  fullName: NativeLand.Exceptions.UnsupportedPlatformException.UnsupportedPlatformException()
+  fullName.vb: NativeLand.Exceptions.UnsupportedPlatformException.New()
+  nameWithType: UnsupportedPlatformException.UnsupportedPlatformException()
+  nameWithType.vb: UnsupportedPlatformException.New()
+- uid: NativeLand.Exceptions.UnsupportedPlatformException.#ctor(System.String)
+  name: UnsupportedPlatformException(string)
+  href: api/NativeLand.Exceptions.UnsupportedPlatformException.html#NativeLand_Exceptions_UnsupportedPlatformException__ctor_System_String_
+  commentId: M:NativeLand.Exceptions.UnsupportedPlatformException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: NativeLand.Exceptions.UnsupportedPlatformException.UnsupportedPlatformException(string)
+  fullName.vb: NativeLand.Exceptions.UnsupportedPlatformException.New(String)
+  nameWithType: UnsupportedPlatformException.UnsupportedPlatformException(string)
+  nameWithType.vb: UnsupportedPlatformException.New(String)
+- uid: NativeLand.Exceptions.UnsupportedPlatformException.#ctor(System.String,System.Exception)
+  name: UnsupportedPlatformException(string, Exception)
+  href: api/NativeLand.Exceptions.UnsupportedPlatformException.html#NativeLand_Exceptions_UnsupportedPlatformException__ctor_System_String_System_Exception_
+  commentId: M:NativeLand.Exceptions.UnsupportedPlatformException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: NativeLand.Exceptions.UnsupportedPlatformException.UnsupportedPlatformException(string, System.Exception)
+  fullName.vb: NativeLand.Exceptions.UnsupportedPlatformException.New(String, System.Exception)
+  nameWithType: UnsupportedPlatformException.UnsupportedPlatformException(string, Exception)
+  nameWithType.vb: UnsupportedPlatformException.New(String, Exception)
+- uid: NativeLand.Exceptions.UnsupportedPlatformException.#ctor*
+  name: UnsupportedPlatformException
+  href: api/NativeLand.Exceptions.UnsupportedPlatformException.html#NativeLand_Exceptions_UnsupportedPlatformException__ctor_
+  commentId: Overload:NativeLand.Exceptions.UnsupportedPlatformException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NativeLand.Exceptions.UnsupportedPlatformException.UnsupportedPlatformException
+  fullName.vb: NativeLand.Exceptions.UnsupportedPlatformException.New
+  nameWithType: UnsupportedPlatformException.UnsupportedPlatformException
+  nameWithType.vb: UnsupportedPlatformException.New
+- uid: NativeLand.LibraryFile
+  name: LibraryFile
+  href: api/NativeLand.LibraryFile.html
+  commentId: T:NativeLand.LibraryFile
+  fullName: NativeLand.LibraryFile
+  nameWithType: LibraryFile
+- uid: NativeLand.LibraryFile.#ctor(System.String,System.Byte[])
+  name: LibraryFile(string, byte[])
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile__ctor_System_String_System_Byte___
+  commentId: M:NativeLand.LibraryFile.#ctor(System.String,System.Byte[])
+  name.vb: New(String, Byte())
+  fullName: NativeLand.LibraryFile.LibraryFile(string, byte[])
+  fullName.vb: NativeLand.LibraryFile.New(String, Byte())
+  nameWithType: LibraryFile.LibraryFile(string, byte[])
+  nameWithType.vb: LibraryFile.New(String, Byte())
+- uid: NativeLand.LibraryFile.#ctor*
+  name: LibraryFile
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile__ctor_
+  commentId: Overload:NativeLand.LibraryFile.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NativeLand.LibraryFile.LibraryFile
+  fullName.vb: NativeLand.LibraryFile.New
+  nameWithType: LibraryFile.LibraryFile
+  nameWithType.vb: LibraryFile.New
+- uid: NativeLand.LibraryFile.CanLoadExplicitly
+  name: CanLoadExplicitly
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_CanLoadExplicitly
+  commentId: P:NativeLand.LibraryFile.CanLoadExplicitly
+  fullName: NativeLand.LibraryFile.CanLoadExplicitly
+  nameWithType: LibraryFile.CanLoadExplicitly
+- uid: NativeLand.LibraryFile.CanLoadExplicitly*
+  name: CanLoadExplicitly
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_CanLoadExplicitly_
+  commentId: Overload:NativeLand.LibraryFile.CanLoadExplicitly
+  isSpec: "True"
+  fullName: NativeLand.LibraryFile.CanLoadExplicitly
+  nameWithType: LibraryFile.CanLoadExplicitly
+- uid: NativeLand.LibraryFile.FileName
+  name: FileName
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_FileName
+  commentId: P:NativeLand.LibraryFile.FileName
+  fullName: NativeLand.LibraryFile.FileName
+  nameWithType: LibraryFile.FileName
+- uid: NativeLand.LibraryFile.FileName*
+  name: FileName
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_FileName_
+  commentId: Overload:NativeLand.LibraryFile.FileName
+  isSpec: "True"
+  fullName: NativeLand.LibraryFile.FileName
+  nameWithType: LibraryFile.FileName
+- uid: NativeLand.LibraryFile.Resource
+  name: Resource
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_Resource
+  commentId: P:NativeLand.LibraryFile.Resource
+  fullName: NativeLand.LibraryFile.Resource
+  nameWithType: LibraryFile.Resource
+- uid: NativeLand.LibraryFile.Resource*
+  name: Resource
+  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_Resource_
+  commentId: Overload:NativeLand.LibraryFile.Resource
+  isSpec: "True"
+  fullName: NativeLand.LibraryFile.Resource
+  nameWithType: LibraryFile.Resource
+- uid: NativeLand.LibraryItem
+  name: LibraryItem
+  href: api/NativeLand.LibraryItem.html
+  commentId: T:NativeLand.LibraryItem
+  fullName: NativeLand.LibraryItem
+  nameWithType: LibraryItem
+- uid: NativeLand.LibraryItem.#ctor(NativeLand.Tools.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
+  name: LibraryItem(Platform, Architecture, params LibraryFile[])
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_NativeLand_Tools_Platform_System_Runtime_InteropServices_Architecture_NativeLand_LibraryFile___
+  commentId: M:NativeLand.LibraryItem.#ctor(NativeLand.Tools.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
+  name.vb: New(Platform, Architecture, ParamArray LibraryFile())
+  fullName: NativeLand.LibraryItem.LibraryItem(NativeLand.Tools.Platform, System.Runtime.InteropServices.Architecture, params NativeLand.LibraryFile[])
+  fullName.vb: NativeLand.LibraryItem.New(NativeLand.Tools.Platform, System.Runtime.InteropServices.Architecture, ParamArray NativeLand.LibraryFile())
+  nameWithType: LibraryItem.LibraryItem(Platform, Architecture, params LibraryFile[])
+  nameWithType.vb: LibraryItem.New(Platform, Architecture, ParamArray LibraryFile())
+- uid: NativeLand.LibraryItem.#ctor*
+  name: LibraryItem
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_
+  commentId: Overload:NativeLand.LibraryItem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NativeLand.LibraryItem.LibraryItem
+  fullName.vb: NativeLand.LibraryItem.New
+  nameWithType: LibraryItem.LibraryItem
+  nameWithType.vb: LibraryItem.New
+- uid: NativeLand.LibraryItem.Bitness
+  name: Bitness
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_Bitness
+  commentId: P:NativeLand.LibraryItem.Bitness
+  fullName: NativeLand.LibraryItem.Bitness
+  nameWithType: LibraryItem.Bitness
+- uid: NativeLand.LibraryItem.Bitness*
+  name: Bitness
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_Bitness_
+  commentId: Overload:NativeLand.LibraryItem.Bitness
+  isSpec: "True"
+  fullName: NativeLand.LibraryItem.Bitness
+  nameWithType: LibraryItem.Bitness
+- uid: NativeLand.LibraryItem.Files
+  name: Files
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_Files
+  commentId: P:NativeLand.LibraryItem.Files
+  fullName: NativeLand.LibraryItem.Files
+  nameWithType: LibraryItem.Files
+- uid: NativeLand.LibraryItem.Files*
+  name: Files
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_Files_
+  commentId: Overload:NativeLand.LibraryItem.Files
+  isSpec: "True"
+  fullName: NativeLand.LibraryItem.Files
+  nameWithType: LibraryItem.Files
+- uid: NativeLand.LibraryItem.LoadItem(System.String,System.Boolean)
+  name: LoadItem(string, bool)
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_LoadItem_System_String_System_Boolean_
+  commentId: M:NativeLand.LibraryItem.LoadItem(System.String,System.Boolean)
+  name.vb: LoadItem(String, Boolean)
+  fullName: NativeLand.LibraryItem.LoadItem(string, bool)
+  fullName.vb: NativeLand.LibraryItem.LoadItem(String, Boolean)
+  nameWithType: LibraryItem.LoadItem(string, bool)
+  nameWithType.vb: LibraryItem.LoadItem(String, Boolean)
+- uid: NativeLand.LibraryItem.LoadItem*
+  name: LoadItem
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_LoadItem_
+  commentId: Overload:NativeLand.LibraryItem.LoadItem
+  isSpec: "True"
+  fullName: NativeLand.LibraryItem.LoadItem
+  nameWithType: LibraryItem.LoadItem
+- uid: NativeLand.LibraryItem.Platform
+  name: Platform
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_Platform
+  commentId: P:NativeLand.LibraryItem.Platform
+  fullName: NativeLand.LibraryItem.Platform
+  nameWithType: LibraryItem.Platform
+- uid: NativeLand.LibraryItem.Platform*
+  name: Platform
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_Platform_
+  commentId: Overload:NativeLand.LibraryItem.Platform
+  isSpec: "True"
+  fullName: NativeLand.LibraryItem.Platform
+  nameWithType: LibraryItem.Platform
+- uid: NativeLand.LibraryManager
+  name: LibraryManager
+  href: api/NativeLand.LibraryManager.html
+  commentId: T:NativeLand.LibraryManager
+  fullName: NativeLand.LibraryManager
+  nameWithType: LibraryManager
+- uid: NativeLand.LibraryManager.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.LibraryItem[])
+  name: LibraryManager(ILoggerFactory, params LibraryItem[])
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager__ctor_Microsoft_Extensions_Logging_ILoggerFactory_NativeLand_LibraryItem___
+  commentId: M:NativeLand.LibraryManager.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.LibraryItem[])
+  name.vb: New(ILoggerFactory, ParamArray LibraryItem())
+  fullName: NativeLand.LibraryManager.LibraryManager(Microsoft.Extensions.Logging.ILoggerFactory, params NativeLand.LibraryItem[])
+  fullName.vb: NativeLand.LibraryManager.New(Microsoft.Extensions.Logging.ILoggerFactory, ParamArray NativeLand.LibraryItem())
+  nameWithType: LibraryManager.LibraryManager(ILoggerFactory, params LibraryItem[])
+  nameWithType.vb: LibraryManager.New(ILoggerFactory, ParamArray LibraryItem())
+- uid: NativeLand.LibraryManager.#ctor(NativeLand.LibraryItem[])
+  name: LibraryManager(params LibraryItem[])
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager__ctor_NativeLand_LibraryItem___
+  commentId: M:NativeLand.LibraryManager.#ctor(NativeLand.LibraryItem[])
+  name.vb: New(ParamArray LibraryItem())
+  fullName: NativeLand.LibraryManager.LibraryManager(params NativeLand.LibraryItem[])
+  fullName.vb: NativeLand.LibraryManager.New(ParamArray NativeLand.LibraryItem())
+  nameWithType: LibraryManager.LibraryManager(params LibraryItem[])
+  nameWithType.vb: LibraryManager.New(ParamArray LibraryItem())
+- uid: NativeLand.LibraryManager.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.LibraryItem[])
+  name: LibraryManager(string, ILoggerFactory, params LibraryItem[])
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager__ctor_System_String_Microsoft_Extensions_Logging_ILoggerFactory_NativeLand_LibraryItem___
+  commentId: M:NativeLand.LibraryManager.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.LibraryItem[])
+  name.vb: New(String, ILoggerFactory, ParamArray LibraryItem())
+  fullName: NativeLand.LibraryManager.LibraryManager(string, Microsoft.Extensions.Logging.ILoggerFactory, params NativeLand.LibraryItem[])
+  fullName.vb: NativeLand.LibraryManager.New(String, Microsoft.Extensions.Logging.ILoggerFactory, ParamArray NativeLand.LibraryItem())
+  nameWithType: LibraryManager.LibraryManager(string, ILoggerFactory, params LibraryItem[])
+  nameWithType.vb: LibraryManager.New(String, ILoggerFactory, ParamArray LibraryItem())
+- uid: NativeLand.LibraryManager.#ctor*
+  name: LibraryManager
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager__ctor_
+  commentId: Overload:NativeLand.LibraryManager.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NativeLand.LibraryManager.LibraryManager
+  fullName.vb: NativeLand.LibraryManager.New
+  nameWithType: LibraryManager.LibraryManager
+  nameWithType.vb: LibraryManager.New
+- uid: NativeLand.LibraryManager.FindItem
+  name: FindItem()
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_FindItem
+  commentId: M:NativeLand.LibraryManager.FindItem
+  fullName: NativeLand.LibraryManager.FindItem()
+  nameWithType: LibraryManager.FindItem()
+- uid: NativeLand.LibraryManager.FindItem*
+  name: FindItem
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_FindItem_
+  commentId: Overload:NativeLand.LibraryManager.FindItem
+  isSpec: "True"
+  fullName: NativeLand.LibraryManager.FindItem
+  nameWithType: LibraryManager.FindItem
+- uid: NativeLand.LibraryManager.GetPlatform
+  name: GetPlatform()
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_GetPlatform
+  commentId: M:NativeLand.LibraryManager.GetPlatform
+  fullName: NativeLand.LibraryManager.GetPlatform()
+  nameWithType: LibraryManager.GetPlatform()
+- uid: NativeLand.LibraryManager.GetPlatform*
+  name: GetPlatform
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_GetPlatform_
+  commentId: Overload:NativeLand.LibraryManager.GetPlatform
+  isSpec: "True"
+  fullName: NativeLand.LibraryManager.GetPlatform
+  nameWithType: LibraryManager.GetPlatform
+- uid: NativeLand.LibraryManager.LoadLibraryExplicit
+  name: LoadLibraryExplicit
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadLibraryExplicit
+  commentId: P:NativeLand.LibraryManager.LoadLibraryExplicit
+  fullName: NativeLand.LibraryManager.LoadLibraryExplicit
+  nameWithType: LibraryManager.LoadLibraryExplicit
+- uid: NativeLand.LibraryManager.LoadLibraryExplicit*
+  name: LoadLibraryExplicit
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadLibraryExplicit_
+  commentId: Overload:NativeLand.LibraryManager.LoadLibraryExplicit
+  isSpec: "True"
+  fullName: NativeLand.LibraryManager.LoadLibraryExplicit
+  nameWithType: LibraryManager.LoadLibraryExplicit
+- uid: NativeLand.LibraryManager.LoadNativeLibrary
+  name: LoadNativeLibrary()
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadNativeLibrary
+  commentId: M:NativeLand.LibraryManager.LoadNativeLibrary
+  fullName: NativeLand.LibraryManager.LoadNativeLibrary()
+  nameWithType: LibraryManager.LoadNativeLibrary()
+- uid: NativeLand.LibraryManager.LoadNativeLibrary(System.Boolean)
+  name: LoadNativeLibrary(bool)
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadNativeLibrary_System_Boolean_
+  commentId: M:NativeLand.LibraryManager.LoadNativeLibrary(System.Boolean)
+  name.vb: LoadNativeLibrary(Boolean)
+  fullName: NativeLand.LibraryManager.LoadNativeLibrary(bool)
+  fullName.vb: NativeLand.LibraryManager.LoadNativeLibrary(Boolean)
+  nameWithType: LibraryManager.LoadNativeLibrary(bool)
+  nameWithType.vb: LibraryManager.LoadNativeLibrary(Boolean)
+- uid: NativeLand.LibraryManager.LoadNativeLibrary*
+  name: LoadNativeLibrary
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadNativeLibrary_
+  commentId: Overload:NativeLand.LibraryManager.LoadNativeLibrary
+  isSpec: "True"
+  fullName: NativeLand.LibraryManager.LoadNativeLibrary
+  nameWithType: LibraryManager.LoadNativeLibrary
+- uid: NativeLand.LibraryManager.TargetDirectory
+  name: TargetDirectory
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_TargetDirectory
+  commentId: P:NativeLand.LibraryManager.TargetDirectory
+  fullName: NativeLand.LibraryManager.TargetDirectory
+  nameWithType: LibraryManager.TargetDirectory
+- uid: NativeLand.LibraryManager.TargetDirectory*
+  name: TargetDirectory
+  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_TargetDirectory_
+  commentId: Overload:NativeLand.LibraryManager.TargetDirectory
+  isSpec: "True"
+  fullName: NativeLand.LibraryManager.TargetDirectory
+  nameWithType: LibraryManager.TargetDirectory
+- uid: NativeLand.Tools
+  name: NativeLand.Tools
+  href: api/NativeLand.Tools.html
+  commentId: N:NativeLand.Tools
+  fullName: NativeLand.Tools
+  nameWithType: NativeLand.Tools
+- uid: NativeLand.Tools.PathHelper
+  name: PathHelper
+  href: api/NativeLand.Tools.PathHelper.html
+  commentId: T:NativeLand.Tools.PathHelper
+  fullName: NativeLand.Tools.PathHelper
+  nameWithType: PathHelper
+- uid: NativeLand.Tools.PathHelper.CombineWithCurrentDirectory(System.Reflection.Assembly,System.String)
+  name: CombineWithCurrentDirectory(Assembly, string)
+  href: api/NativeLand.Tools.PathHelper.html#NativeLand_Tools_PathHelper_CombineWithCurrentDirectory_System_Reflection_Assembly_System_String_
+  commentId: M:NativeLand.Tools.PathHelper.CombineWithCurrentDirectory(System.Reflection.Assembly,System.String)
+  name.vb: CombineWithCurrentDirectory(Assembly, String)
+  fullName: NativeLand.Tools.PathHelper.CombineWithCurrentDirectory(System.Reflection.Assembly, string)
+  fullName.vb: NativeLand.Tools.PathHelper.CombineWithCurrentDirectory(System.Reflection.Assembly, String)
+  nameWithType: PathHelper.CombineWithCurrentDirectory(Assembly, string)
+  nameWithType.vb: PathHelper.CombineWithCurrentDirectory(Assembly, String)
+- uid: NativeLand.Tools.PathHelper.CombineWithCurrentDirectory*
+  name: CombineWithCurrentDirectory
+  href: api/NativeLand.Tools.PathHelper.html#NativeLand_Tools_PathHelper_CombineWithCurrentDirectory_
+  commentId: Overload:NativeLand.Tools.PathHelper.CombineWithCurrentDirectory
+  isSpec: "True"
+  fullName: NativeLand.Tools.PathHelper.CombineWithCurrentDirectory
+  nameWithType: PathHelper.CombineWithCurrentDirectory
+- uid: NativeLand.Tools.PathHelper.GetCurrentDirectory(System.Reflection.Assembly)
+  name: GetCurrentDirectory(Assembly)
+  href: api/NativeLand.Tools.PathHelper.html#NativeLand_Tools_PathHelper_GetCurrentDirectory_System_Reflection_Assembly_
+  commentId: M:NativeLand.Tools.PathHelper.GetCurrentDirectory(System.Reflection.Assembly)
+  fullName: NativeLand.Tools.PathHelper.GetCurrentDirectory(System.Reflection.Assembly)
+  nameWithType: PathHelper.GetCurrentDirectory(Assembly)
+- uid: NativeLand.Tools.PathHelper.GetCurrentDirectory*
+  name: GetCurrentDirectory
+  href: api/NativeLand.Tools.PathHelper.html#NativeLand_Tools_PathHelper_GetCurrentDirectory_
+  commentId: Overload:NativeLand.Tools.PathHelper.GetCurrentDirectory
+  isSpec: "True"
+  fullName: NativeLand.Tools.PathHelper.GetCurrentDirectory
+  nameWithType: PathHelper.GetCurrentDirectory
+- uid: NativeLand.Tools.Platform
+  name: Platform
+  href: api/NativeLand.Tools.Platform.html
+  commentId: T:NativeLand.Tools.Platform
+  fullName: NativeLand.Tools.Platform
+  nameWithType: Platform
+- uid: NativeLand.Tools.Platform.Linux
+  name: Linux
+  href: api/NativeLand.Tools.Platform.html#NativeLand_Tools_Platform_Linux
+  commentId: F:NativeLand.Tools.Platform.Linux
+  fullName: NativeLand.Tools.Platform.Linux
+  nameWithType: Platform.Linux
+- uid: NativeLand.Tools.Platform.MacOS
+  name: MacOS
+  href: api/NativeLand.Tools.Platform.html#NativeLand_Tools_Platform_MacOS
+  commentId: F:NativeLand.Tools.Platform.MacOS
+  fullName: NativeLand.Tools.Platform.MacOS
+  nameWithType: Platform.MacOS
+- uid: NativeLand.Tools.Platform.Windows
+  name: Windows
+  href: api/NativeLand.Tools.Platform.html#NativeLand_Tools_Platform_Windows
+  commentId: F:NativeLand.Tools.Platform.Windows
+  fullName: NativeLand.Tools.Platform.Windows
+  nameWithType: Platform.Windows
+- uid: NativeLand.Tools.ResourceAccessor
+  name: ResourceAccessor
+  href: api/NativeLand.Tools.ResourceAccessor.html
+  commentId: T:NativeLand.Tools.ResourceAccessor
+  fullName: NativeLand.Tools.ResourceAccessor
+  nameWithType: ResourceAccessor
+- uid: NativeLand.Tools.ResourceAccessor.#ctor(System.Reflection.Assembly)
+  name: ResourceAccessor(Assembly)
+  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor__ctor_System_Reflection_Assembly_
+  commentId: M:NativeLand.Tools.ResourceAccessor.#ctor(System.Reflection.Assembly)
+  name.vb: New(Assembly)
+  fullName: NativeLand.Tools.ResourceAccessor.ResourceAccessor(System.Reflection.Assembly)
+  fullName.vb: NativeLand.Tools.ResourceAccessor.New(System.Reflection.Assembly)
+  nameWithType: ResourceAccessor.ResourceAccessor(Assembly)
+  nameWithType.vb: ResourceAccessor.New(Assembly)
+- uid: NativeLand.Tools.ResourceAccessor.#ctor*
+  name: ResourceAccessor
+  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor__ctor_
+  commentId: Overload:NativeLand.Tools.ResourceAccessor.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NativeLand.Tools.ResourceAccessor.ResourceAccessor
+  fullName.vb: NativeLand.Tools.ResourceAccessor.New
+  nameWithType: ResourceAccessor.ResourceAccessor
+  nameWithType.vb: ResourceAccessor.New
+- uid: NativeLand.Tools.ResourceAccessor.Binary(System.String)
+  name: Binary(string)
+  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor_Binary_System_String_
+  commentId: M:NativeLand.Tools.ResourceAccessor.Binary(System.String)
+  name.vb: Binary(String)
+  fullName: NativeLand.Tools.ResourceAccessor.Binary(string)
+  fullName.vb: NativeLand.Tools.ResourceAccessor.Binary(String)
+  nameWithType: ResourceAccessor.Binary(string)
+  nameWithType.vb: ResourceAccessor.Binary(String)
+- uid: NativeLand.Tools.ResourceAccessor.Binary*
+  name: Binary
+  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor_Binary_
+  commentId: Overload:NativeLand.Tools.ResourceAccessor.Binary
+  isSpec: "True"
+  fullName: NativeLand.Tools.ResourceAccessor.Binary
+  nameWithType: ResourceAccessor.Binary

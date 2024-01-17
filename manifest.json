@@ -1,0 +1,168 @@
+{
+  "sitemap": {
+    "baseUrl": "https://aptivi.github.io/NativeLand/"
+  },
+  "source_base_path": "/github/workspace/DocGen",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Exceptions.NoBinaryForPlatformException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Exceptions.NoBinaryForPlatformException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Exceptions.UnsupportedPlatformException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Exceptions.UnsupportedPlatformException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.LibraryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.LibraryFile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.LibraryItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.LibraryItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.LibraryManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.LibraryManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Tools.PathHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Tools.PathHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Tools.Platform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Tools.Platform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Tools.ResourceAccessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Tools.ResourceAccessor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Tools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
