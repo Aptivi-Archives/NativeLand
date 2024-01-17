@@ -1,11 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using Microsoft.Extensions.Logging;
-
-namespace NativeLand
+﻿namespace NativeLand
 {
 	/// <summary>
 	/// A class to store the information about native library file.
@@ -44,15 +37,5 @@ namespace NativeLand
 		/// shouldn't be loaded explicitly when <see cref="LibraryManager.LoadLibraryExplicit"/> is <code>True</code>. 
 		/// </summary>
 		public bool CanLoadExplicitly { get; set; } = true;
-		
-		/// <summary>
-		/// Gets the path to which current file will be unpacked.
-		/// </summary>
-		/// <param name="targetAssembly">Target assembly for which to compute the path.</param>
-		[Obsolete("This method is no longer used to determine unpack path. It's determined at LibraryManager, once for all files.", true)]
-		public string GetUnpackPath(Assembly targetAssembly)
-		{
-			return null;
-		}
 	}
 }

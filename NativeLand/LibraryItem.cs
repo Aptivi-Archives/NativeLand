@@ -1,18 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using Microsoft.Extensions.Logging;
 
 namespace NativeLand
 {
-    /// <summary>
-    /// Library binaries for specified platform and bitness.
-    /// </summary>
-    public class LibraryItem
+	/// <summary>
+	/// Library binaries for specified platform and bitness.
+	/// </summary>
+	public class LibraryItem
     {
         /// <summary>
         /// Ctor.
@@ -41,11 +34,6 @@ namespace NativeLand
         /// Bitness for which this binary is used.
         /// </summary>
         public Bitness Bitness { get; set; }
-        
-        [Obsolete("targetAssembly is no longer required. Use the other overload.")]
-        public void LoadItem(Assembly targetAssembly, bool loadLibrary = true)
-        {
-        }
 
         /// <summary>
         /// Unpacks the library and directly loads it if on Windows.

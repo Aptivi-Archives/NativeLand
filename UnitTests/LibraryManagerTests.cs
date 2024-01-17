@@ -1,10 +1,4 @@
-using System;
 using System.Diagnostics;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using MartinCostello.Logging.XUnit;
-using Microsoft.Extensions.Logging;
 using NativeLand;
 using Shouldly;
 using Xunit;
@@ -12,10 +6,10 @@ using Xunit.Abstractions;
 
 namespace UnitTests
 {
-    /// <summary>
-    /// We need to use a separate process per test so that we get a clear picture (libraries must be unloaded before the next test).
-    /// </summary>
-    public class LibraryManagerTests
+	/// <summary>
+	/// We need to use a separate process per test so that we get a clear picture (libraries must be unloaded before the next test).
+	/// </summary>
+	public class LibraryManagerTests
     {
         private readonly ITestOutputHelper _outputHelper;
 

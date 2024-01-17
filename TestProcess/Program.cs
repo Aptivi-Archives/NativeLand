@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CLAP;
 using Microsoft.Extensions.Logging;
@@ -11,7 +10,7 @@ using Serilog.Extensions.Logging;
 
 namespace TestProcess
 {
-    internal class Program
+	internal class Program
     {
         internal static int Main(string[] args)
         {

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Net.Cache;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using Microsoft.Extensions.Logging;
 
 namespace NativeLand
@@ -19,17 +16,6 @@ namespace NativeLand
 		private readonly ILogger<LibraryManager> _logger;
 
 		private bool _libLoaded = false;
-
-		/// <summary>
-		/// Creates a new library manager which extracts to environment current directory by default.
-		/// </summary>
-		/// <param name="targetAssembly">Calling assembly.</param>
-		/// <param name="items">Library binaries for different platforms.</param>
-		[Obsolete("Specifying target assembly is no longer required since default target directory is environment current directory.")]
-		public LibraryManager(Assembly targetAssembly, params LibraryItem[] items) 
-			: this(Environment.CurrentDirectory, false, null, items)
-		{
-		}
 
 		/// <summary>
 		/// Creates a new library manager which extracts to environment current directory by default.
