@@ -1,16 +1,15 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
 
 namespace NativeLand
 {
-	/// <summary>
-	/// A class to manage, extract and load native implementations of dependent libraries.
-	/// </summary>
-	public class LibraryManager
+    /// <summary>
+    /// A class to manage, extract and load native implementations of dependent libraries.
+    /// </summary>
+    public class LibraryManager
 	{
 		private readonly object _resourceLocker = new object();
 		private readonly LibraryItemInternal[] _items;
