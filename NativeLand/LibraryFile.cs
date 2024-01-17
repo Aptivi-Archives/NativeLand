@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using Microsoft.Extensions.Logging;
 
-namespace NativeLibraryManager
+namespace NativeLand
 {
 	/// <summary>
 	/// A class to store the information about native library file.

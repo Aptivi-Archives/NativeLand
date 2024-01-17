@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using MartinCostello.Logging.XUnit;
 using Microsoft.Extensions.Logging;
-using NativeLibraryManager;
+using NativeLand;
 using Shouldly;
 using Xunit;
 using Xunit.Abstractions;

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CLAP;
 using Microsoft.Extensions.Logging;
-using NativeLibraryManager;
+using NativeLand;
 using Serilog;
 using Serilog.Extensions.Logging;
 

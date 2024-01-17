@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace NativeLibraryManager
+namespace NativeLand
 {
     /// <summary>
     /// Contains useful functions to get paths relative to target assembly.

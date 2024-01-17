@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using Microsoft.Extensions.Logging;
 
-namespace NativeLibraryManager
+namespace NativeLand
 {
 	/// <summary>
 	/// A class to manage, extract and load native implementations of dependent libraries.

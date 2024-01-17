@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace NativeLibraryManager
+namespace NativeLand
 {
     /// <summary>
     /// Thrown when there is no binary for current platform and bitness.

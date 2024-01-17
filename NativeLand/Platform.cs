@@ -1,4 +1,4 @@
-﻿namespace NativeLibraryManager
+﻿namespace NativeLand
 {
 	/// <summary>
 	/// Platform (operating system).
