@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
 
 namespace NativeLand
@@ -112,9 +113,9 @@ namespace NativeLand
 
 				var item = FindItem();
 
-				if (item.Platform == Platform.MacOs && LoadLibraryExplicit)
+				if (item.Platform == Platform.MacOS && LoadLibraryExplicit)
 				{
-					_logger?.LogWarning("Current platform is MacOs and LoadLibraryExplicit is specified. Explicit library loading on MacOs IS USELESS, and your P/Invoke call will fail unless library path is discoverable by system library loader.");
+					_logger?.LogWarning("Current platform is MacOS and LoadLibraryExplicit is specified. Explicit library loading on MacOs IS USELESS, and your P/Invoke call will fail unless library path is discoverable by system library loader.");
 				}
 				
 				item.LoadItem(TargetDirectory, LoadLibraryExplicit);
@@ -131,14 +132,11 @@ namespace NativeLand
 		public LibraryItem FindItem()
 		{
 			var platform = GetPlatform();
-			var bitness = Environment.Is64BitProcess ? Bitness.x64 : Bitness.x32;
+			var bitness = RuntimeInformation.OSArchitecture;
+            bitness = bitness == Architecture.X64 ? RuntimeInformation.ProcessArchitecture : bitness;
 
-            var item = _items.FirstOrDefault(x => x.Platform == platform && x.Bitness == bitness);
-            if (item == null)
-            {
+            var item = _items.FirstOrDefault(x => x.Platform == platform && x.Bitness == bitness) ??
                 throw new NoBinaryForPlatformException($"There is no supported native library for platform '{platform}' and bitness '{bitness}'");
-            }
-
             return item;
         }
 
@@ -149,32 +147,23 @@ namespace NativeLand
 		public static Platform GetPlatform()
 		{
 			string windir = Environment.GetEnvironmentVariable("windir");
-			if (!string.IsNullOrEmpty(windir) && windir.Contains(@"\") && Directory.Exists(windir))
-			{
+			if ((!string.IsNullOrEmpty(windir) && windir.Contains(@"\") && Directory.Exists(windir)) ||
+                Environment.OSVersion.Platform == PlatformID.Win32NT)
 				return Platform.Windows;
-			}
 			else if (File.Exists(@"/proc/sys/kernel/ostype"))
 			{
 				string osType = File.ReadAllText(@"/proc/sys/kernel/ostype");
 				if (osType.StartsWith("Linux", StringComparison.OrdinalIgnoreCase))
-				{
-					// Note: Android gets here too
 					return Platform.Linux;
-				}
 				else
-				{
 					throw new UnsupportedPlatformException($"Unsupported OS: {osType}");
-				}
-			}
-			else if (File.Exists(@"/System/Library/CoreServices/SystemVersion.plist"))
-			{
-				// Note: iOS gets here too
-				return Platform.MacOs;
-			}
+            }
+            else if (File.Exists(@"/System/Library/CoreServices/SystemVersion.plist"))
+				return Platform.MacOS;
+            else if (Environment.OSVersion.Platform == PlatformID.Unix)
+                return Platform.Linux;
 			else
-			{
 				throw new UnsupportedPlatformException("Unsupported OS!");
-			}
 		}
 	}
 }

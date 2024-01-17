@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
       <OutputType>Exe</OutputType>
@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CLAP-DotNetCore" Version="4.6.4" />
       <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
       <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
     </ItemGroup>
@@ -17,6 +16,7 @@
       <EmbeddedResource Include="libTestLib.dylib" />
       <EmbeddedResource Include="libTestLib.so" />
       <EmbeddedResource Include="TestLib.dll" />
+      <EmbeddedResource Include="libTestLib_Arm64.so" />
     </ItemGroup>
 
     <ItemGroup>

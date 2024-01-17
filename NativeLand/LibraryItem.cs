@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 
 namespace NativeLand
 {
@@ -8,12 +9,12 @@ namespace NativeLand
 	public class LibraryItem
     {
         /// <summary>
-        /// Ctor.
+        /// Makes a new instance of this class
         /// </summary>
         /// <param name="platform">Binary platform.</param>
         /// <param name="bitness">Binary bitness.</param>
         /// <param name="files">A collection of files for this bitness and platform.</param>
-        public LibraryItem(Platform platform, Bitness bitness, params LibraryFile[] files)
+        public LibraryItem(Platform platform, Architecture bitness, params LibraryFile[] files)
         {
             Platform = platform;
             Bitness = bitness;
@@ -33,7 +34,7 @@ namespace NativeLand
         /// <summary>
         /// Bitness for which this binary is used.
         /// </summary>
-        public Bitness Bitness { get; set; }
+        public Architecture Bitness { get; set; }
 
         /// <summary>
         /// Unpacks the library and directly loads it if on Windows.

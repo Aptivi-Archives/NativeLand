@@ -35,7 +35,7 @@ namespace NativeLand
 		        {
 			        LoadWindowsLibrary(path);
 		        }
-		        else if (Platform == Platform.Linux || Platform == Platform.MacOs)
+		        else if (Platform == Platform.Linux || Platform == Platform.MacOS)
 		        {
 			        LoadNixLibrary(path);
 		        }
@@ -47,21 +47,17 @@ namespace NativeLand
 			if (File.Exists(path))
 			{
 				_logger?.LogInformation($"File {path} already exists, computing hashes.");
-				using (var md5 = MD5.Create())
-				{
-					using (var stream = File.OpenRead(path))
-					{
-						string fileHash = BitConverter.ToString(md5.ComputeHash(stream));
-						string curHash = BitConverter.ToString(md5.ComputeHash(bytes));
+                using var md5 = MD5.Create();
+                using var stream = File.OpenRead(path);
+                string fileHash = BitConverter.ToString(md5.ComputeHash(stream));
+                string curHash = BitConverter.ToString(md5.ComputeHash(bytes));
 
-						if (string.Equals(fileHash, curHash))
-						{
-							_logger?.LogInformation($"Hashes are equal, no need to unpack.");
-							return;
-						}
-					}
-				}
-			}
+                if (string.Equals(fileHash, curHash))
+                {
+                    _logger?.LogInformation($"Hashes are equal, no need to unpack.");
+                    return;
+                }
+            }
 
 			File.WriteAllBytes(path, bytes);
 		}
@@ -69,8 +65,17 @@ namespace NativeLand
 		internal void LoadNixLibrary(string path)
 		{
 			_logger?.LogInformation($"Calling dlopen for {path}");
-			var result = dlopen(path, RTLD_LAZY | RTLD_GLOBAL);
-			_logger?.LogInformation(result == IntPtr.Zero ? "FAILED!" : "Success");
+            try
+            {
+			    var result = dlopen(path, RTLD_LAZY | RTLD_GLOBAL);
+			    _logger?.LogInformation(result == IntPtr.Zero ? "FAILED!" : "Success");
+            }
+            catch (Exception ex)
+            {
+                _logger?.LogWarning($"libdl.so may not be found. Trying with libdl.so.2... {ex.Message}");
+                var result = dlopen_new(path, RTLD_LAZY | RTLD_GLOBAL);
+                _logger?.LogInformation(result == IntPtr.Zero ? "FAILED!" : "Success");
+            }
 		}
 
 		internal void LoadWindowsLibrary(string path)
@@ -81,17 +86,18 @@ namespace NativeLand
 		}
 
 		#region dlopen
+		private const int RTLD_LAZY = 0x00001;   // Only resolve symbols as needed
+		private const int RTLD_GLOBAL = 0x00100; // Make symbols available to libraries loaded later
 
-		private const int RTLD_LAZY = 0x00001; //Only resolve symbols as needed
-		private const int RTLD_GLOBAL = 0x00100; //Make symbols available to libraries loaded later
 		[DllImport("dl")]
-		private static extern IntPtr dlopen (string file, int mode);
+		private static extern IntPtr dlopen(string file, int mode);
 
-		#endregion
-		
-		#region LoadLibraryEx
+        [DllImport("libdl.so.2", EntryPoint = "dlopen")]
+        private static extern IntPtr dlopen_new(string file, int mode);
+        #endregion
 
-		[System.Flags]
+        #region LoadLibraryEx
+        [Flags]
 		private enum LoadLibraryFlags : uint
 		{
 			DONT_RESOLVE_DLL_REFERENCES = 0x00000001,
@@ -109,7 +115,6 @@ namespace NativeLand
 
 		[DllImport("kernel32.dll", SetLastError = true)]
 		private static extern IntPtr LoadLibraryEx(string lpFileName, IntPtr hReservedNull, LoadLibraryFlags dwFlags);
-
 		#endregion
     }
 }

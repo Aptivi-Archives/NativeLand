@@ -6,7 +6,7 @@
 	public class LibraryFile
 	{
 		/// <summary>
-		/// Ctor.
+		/// Makes a new instance of this class
 		/// </summary>
 		/// <param name="fileName">Filename to use when extracting the library.</param>
 		/// <param name="resource">Library binary.</param>

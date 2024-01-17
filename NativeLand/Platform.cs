@@ -9,15 +9,13 @@
 		/// Windows platform.
 		/// </summary>
 		Windows,
-
 		/// <summary>
 		/// Linux platform.
 		/// </summary>
 		Linux,
-
 		/// <summary>
-		/// MacOs platform.
+		/// MacOS platform.
 		/// </summary>
-		MacOs
+		MacOS
 	}
 }
