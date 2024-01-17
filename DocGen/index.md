@@ -1,6 +1,6 @@
 ## What is NativeLand?
 
-NativeLand is an improved version of Inxi.NET that uses native code to accelerate hardware parsing
+NativeLand is a C# library that allows you to load native libraries.
 
 ## What is this web page?
  

@@ -28,6 +28,6 @@ jobs:
     - uses: actions/upload-artifact@v3
       if: success() || failure()
       with:
-        name: sp-build
-        path: "NativeLand.Bin/"
+        name: nl-build
+        path: "NativeLand/bin/Debug/"
         
