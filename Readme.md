@@ -1,109 +1,67 @@
-# Native dependency manager for .NET Standard libraries
 
-This library helps you manage dependencies that you want to bundle with your .NET standard assembly. Originally it was developed
-to be used with native shared libraries, but you can bundle any file you want.
+<div align = center>
 
-The main feature of this library is cross-platform support. You tell it which dependencies are for which platform, and `LibraryManager`
-will extract and load relevant files under each patform.
-
-# How to use the library
-
-## Pack your dependencies as embedded resources
-
-Put your dependencies somewhere relative to your project. Let's assume you have one library compiled for each platform: `TestLib.dll`
-for Windows, `libTestLib.so` for Linux and `libTestLib.dylib` for macOs. Add these files as embedded resources to your `.csproj` as follows:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <!-- Some other stuff here -->
-
-    <ItemGroup>
-      <EmbeddedResource Include="libTestLib.dylib" />
-      <EmbeddedResource Include="libTestLib.so" />
-      <EmbeddedResource Include="TestLib.dll" />
-    </ItemGroup>
-</Project>
-```
-
-Now your dependencies will be compiled into your assembly as resources.
-
-## Use `LibraryManager` to specify and extract dependencies
-
-```csharp
-private static void Main(string[] args)
-{
-    var accessor = new ResourceAccessor(Assembly.GetExecutingAssembly());
-    var libManager = new LibraryManager(
-        new LibraryItem(Platform.MacOs, Bitness.x64,
-            new LibraryFile("libTestLib.dylib", accessor.Binary("libTestLib.dylib"))),
-        new LibraryItem(Platform.Windows, Bitness.x64, 
-            new LibraryFile("TestLib.dll", accessor.Binary("TestLib.dll"))),
-        new LibraryItem(Platform.Linux, Bitness.x64,
-            new LibraryFile("libTestLib.so", accessor.Binary("libTestLib.so"))));
+<br>
+<br>
     
-    libManager.LoadNativeLibrary();
+<img
+  src = 'https://cdn.jsdelivr.net/gh/Aptivi/NativeLand@master/NativeLand/OfficialAppIcon-NativeLand-512.png'
+  width = 256
+  align = center
+/>
 
-    // Library is loaded, other code here
-}
-```
+<br>
 
-Each LibraryItem specifies a bundle of files that should be extracted for a specific platform. It this case we create 3 instances to 
-support Windows, Linux and MacOs — all 64-bit. LibraryItem takes any number of LibraryFile objects. With these objects you specify 
-the extracted file name and an actual binary file in the form of byte array. This is where `ResourceAccessor` comes in handy.
+# NativeLand
+    
+*A C# library for loading native libraries.*
 
-We should note that resource name you pass to ResourceAccessor is just a path to original file relative to project root with slashes 
-`\\` replaced with dots `.` So, for example, if we place some file in `Foo\Bar\lib.dll` project folder, we would adderss it as:
+<br>
+<br>
 
-```csharp
-accessor.Binary("Foo.Bar.lib.dll")
-```
+[![Badge Main]][Main]   
+[![Badge Main Linux]][Main Linux]
 
-## Target dependency directory
+[![Badge Latest]][Latest]   
+[![Badge NuGet]][NuGet]
 
-`LibraryManager` extracts your dependencies to current process' current directory. **This is the only reliable way to use `[DllImport]` on all
-three platforms.**
+![Badge Size]   
+[![Badge Downloads]][Releases]
 
-If your current directory isn't writable, you are generally out of luck. You can use an overload of `LibraryManager`'s constructor which accepts
-a custom target directory, but then you need to do one of the following:
+[![Button Manual]][Manual]   
+[![Button Libraries]][Libraries]
 
-1. Ensure that target directory that you specify is discoverable by system library loader. The safest bet is to ensure it's on your `PATH`
-**before the whole process starts**.
-2. Enable explicit library loading with `LibraryManager.LoadLibraryExplicit` (read the next section for details). 
-**This will not work on MacOs.** If your target path is not discoverable by system library loader, `dlopen` will succeed on MacOs, but your
-P/Invoke calls will fail. This problem can be mitigated by manually resolving function pointers, but this approach is not yet implemented 
-in this library.
+</div>
+    
+<br>
 
-## Explicit library loading
+</div>
 
-**Warning! Explicit library loading on MacOs IS USELESS, and your P/Invoke call will fail unless library path is discoverable by system library 
-loader (by adding target path to `LD_LIBRARY_PATH` or `PATH` before running your app, for example).**
 
-In previous versions of `NativeLibraryManager` the default behavior was to explicitly load every file using `LoadLibraryEx` on Windows
-and `dlopen` on Linux (explit loading wasn't implemented for MacOs). This approach was quite rigid and caused at least two problems:
+<!----------------------------------------------------------------------------->
 
-1. There might have been some supporting files which didn't require explicit loading. You couldn't load some files and not load the others.
-2. You should have observed a specific order in which you defined `LibraryFile`s if some of them were dependent on others.
+[Releases]: https://github.com/Aptivi/NativeLand/releases
+[Latest]: https://github.com/Aptivi/NativeLand/releases/latest
+[NuGet]: https://www.nuget.org/packages/NativeLand/
 
-Starting from v. `1.0.21` explicit loading is disabled by default.
+[Main]: https://github.com/Aptivi/NativeLand/actions/workflows/build-win.yml
+[Main Linux]: https://github.com/Aptivi/NativeLand/actions/workflows/build-linux.yml
 
-Nevertheless, sometimes you might want to load libraries explicitly. To do so, set `LibraryManager.LoadLibraryExplicit` to `True` before
-calling `LibraryManager.LoadNativeLibrary()`.
+[Libraries]: https://aptivi.gitbook.io/nativeland-manual/project-dependencies
+[Manual]: https://aptivi.gitbook.io/nativeland-manual/
 
-You can also set `LibraryFile.CanLoadExplicitly` to `False` for supporting files, which you want to exclude from explicit loading.
+<!----------------------------------[ Badges ]--------------------------------->
 
-When `LibraryManager.LoadLibraryExplicit` is `True`, `LoadLibraryEx` will be called to explicitly load libraries on Windows, and
-`dlopen` will be called on Linux and MacOs.
+[Badge Downloads]: https://img.shields.io/github/downloads/Aptivi/NativeLand/total?color=217346&label=Downloads&style=for-the-badge&logoColor=white&logo=DocuSign&labelColor=2d9d5f
+[Badge Latest]: https://img.shields.io/github/v/release/Aptivi/NativeLand?color=212121&include_prereleases&label=github&style=for-the-badge&logoColor=white&logo=AzureArtifacts&labelColor=303030
+[Badge NuGet]: https://img.shields.io/nuget/vpre/NativeLand?color=012f52&style=for-the-badge&logoColor=white&logo=NuGet&labelColor=004880
+[Badge Size]: https://img.shields.io/github/repo-size/Aptivi/NativeLand?color=bb4a28&label=size&logoColor=white&style=for-the-badge&logo=GoogleAnalytics&labelColor=E85C33
 
-### Dependency load order with explicit loading
+[Badge Main]: https://github.com/Aptivi/NativeLand/actions/workflows/build-win.yml/badge.svg
+[Badge Main Linux]: https://github.com/Aptivi/NativeLand/actions/workflows/build-linux.yml/badge.svg
 
-As mentioned earlier, there is a restriction when explicitly loading dependencies. If your native library depends on other native
-libraries, which you would also like to bundle with you assembly, you should observe a special order in which you specify `LibraryFile` items.
-You should put libraries with no dependencies ("leaves") first, and dependent libraries last. Use `ldd` on Linux or `Dependency Walker` on 
-Windows to discover the dependecies in your libraries.
 
-## Logging with `Microsoft.Extensions.Logging`
+<!---------------------------------[ Buttons ]--------------------------------->
 
-`LibraryManager` writes a certain amount of logs in case you would like to debug something. This library uses .NET Core 
-`Microsoft.Extensions.Logging` abstraction, so in order to enable logging, just obtain an instance of 
-`Microsoft.Extensions.Logging.ILoggerFactory` and pass it as a parameter to `LibraryManager` constructor.
+[Button Libraries]: https://img.shields.io/badge/Libraries-EA8220?style=for-the-badge&logoColor=white&logo=AzureArtifacts
+[Button Manual]: https://img.shields.io/badge/Docs-blueviolet?style=for-the-badge&logoColor=white&logo=GitBook
