@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace NativeLand
+namespace NativeLand.Tools
 {
     /// <summary>
     /// A helper class to load resources from an assembly.
@@ -37,7 +37,7 @@ namespace NativeLand
                 {
                     throw new InvalidOperationException("Resource not available.");
                 }
-                
+
                 resource.CopyTo(stream);
 
                 return stream.ToArray();

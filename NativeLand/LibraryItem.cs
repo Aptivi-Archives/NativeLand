@@ -1,12 +1,13 @@
+using NativeLand.Tools;
 using System;
 using System.Runtime.InteropServices;
 
 namespace NativeLand
 {
-	/// <summary>
-	/// Library binaries for specified platform and bitness.
-	/// </summary>
-	public class LibraryItem
+    /// <summary>
+    /// Library binaries for specified platform and bitness.
+    /// </summary>
+    public class LibraryItem
     {
         /// <summary>
         /// Makes a new instance of this class

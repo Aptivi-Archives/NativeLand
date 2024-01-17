@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace NativeLand
+namespace NativeLand.Tools
 {
     /// <summary>
     /// Contains useful functions to get paths relative to target assembly.
@@ -38,7 +38,7 @@ namespace NativeLand
         /// <param name="fileName">Right-hand part of the path.</param>
         public static string CombineWithCurrentDirectory(this Assembly targetAssembly, string fileName)
         {
-            string curDir = GetCurrentDirectory(targetAssembly);
+            string curDir = targetAssembly.GetCurrentDirectory();
             return !string.IsNullOrEmpty(curDir) ? Path.Combine(curDir, fileName) : fileName;
         }
     }

@@ -3,6 +3,8 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
+using NativeLand.Exceptions;
+using NativeLand.Tools;
 
 namespace NativeLand
 {

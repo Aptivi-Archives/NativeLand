@@ -4,12 +4,13 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
 using NativeLand;
+using NativeLand.Tools;
 using Serilog;
 using Serilog.Extensions.Logging;
 
 namespace TestProcess
 {
-	internal class Program
+    internal class Program
     {
         private static ILoggerFactory _factory;
 
