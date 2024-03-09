@@ -2,7 +2,7 @@
   "sitemap": {
     "baseUrl": "https://aptivi.github.io/NativeLand/"
   },
-  "source_base_path": "/github/workspace/DocGen",
+  "source_base_path": "/home/runner/work/NativeLand/NativeLand/DocGen",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
