@@ -1,4 +1,4 @@
-OUTPUTS = NativeLand.*/bin NativeLand.*/obj NativeLand/bin NativeLand/obj
+OUTPUTS = TestProcess/bin TestProcess/obj NativeLand/bin NativeLand/obj
 
 .PHONY: all
 
@@ -8,6 +8,12 @@ all: all-online
 
 all-online:
 	$(MAKE) -C tools invoke-build
+
+dbg:
+	$(MAKE) -C tools invoke-build ENVIRONMENT=Debug
+
+doc:
+	$(MAKE) -C tools invoke-doc-build
 
 clean:
 	rm -rf $(OUTPUTS)
