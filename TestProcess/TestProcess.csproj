@@ -3,13 +3,13 @@
     <PropertyGroup>
       <OutputType>Exe</OutputType>
       <TargetFramework>net8.0</TargetFramework>
-      <SignAssembly>True</SignAssembly>
-      <AssemblyOriginatorKeyFile>..\aptivi_snk.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
       <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+
+      <PackageReference Remove="Microsoft.SourceLink.GitHub" />
     </ItemGroup>
 
     <ItemGroup>
