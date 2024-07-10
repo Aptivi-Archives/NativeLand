@@ -99,85 +99,21 @@ references:
   fullName.vb: NativeLand.Exceptions.UnsupportedPlatformException.New
   nameWithType: UnsupportedPlatformException.UnsupportedPlatformException
   nameWithType.vb: UnsupportedPlatformException.New
-- uid: NativeLand.LibraryFile
-  name: LibraryFile
-  href: api/NativeLand.LibraryFile.html
-  commentId: T:NativeLand.LibraryFile
-  fullName: NativeLand.LibraryFile
-  nameWithType: LibraryFile
-- uid: NativeLand.LibraryFile.#ctor(System.String,System.Byte[])
-  name: LibraryFile(string, byte[])
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile__ctor_System_String_System_Byte___
-  commentId: M:NativeLand.LibraryFile.#ctor(System.String,System.Byte[])
-  name.vb: New(String, Byte())
-  fullName: NativeLand.LibraryFile.LibraryFile(string, byte[])
-  fullName.vb: NativeLand.LibraryFile.New(String, Byte())
-  nameWithType: LibraryFile.LibraryFile(string, byte[])
-  nameWithType.vb: LibraryFile.New(String, Byte())
-- uid: NativeLand.LibraryFile.#ctor*
-  name: LibraryFile
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile__ctor_
-  commentId: Overload:NativeLand.LibraryFile.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: NativeLand.LibraryFile.LibraryFile
-  fullName.vb: NativeLand.LibraryFile.New
-  nameWithType: LibraryFile.LibraryFile
-  nameWithType.vb: LibraryFile.New
-- uid: NativeLand.LibraryFile.CanLoadExplicitly
-  name: CanLoadExplicitly
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_CanLoadExplicitly
-  commentId: P:NativeLand.LibraryFile.CanLoadExplicitly
-  fullName: NativeLand.LibraryFile.CanLoadExplicitly
-  nameWithType: LibraryFile.CanLoadExplicitly
-- uid: NativeLand.LibraryFile.CanLoadExplicitly*
-  name: CanLoadExplicitly
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_CanLoadExplicitly_
-  commentId: Overload:NativeLand.LibraryFile.CanLoadExplicitly
-  isSpec: "True"
-  fullName: NativeLand.LibraryFile.CanLoadExplicitly
-  nameWithType: LibraryFile.CanLoadExplicitly
-- uid: NativeLand.LibraryFile.FileName
-  name: FileName
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_FileName
-  commentId: P:NativeLand.LibraryFile.FileName
-  fullName: NativeLand.LibraryFile.FileName
-  nameWithType: LibraryFile.FileName
-- uid: NativeLand.LibraryFile.FileName*
-  name: FileName
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_FileName_
-  commentId: Overload:NativeLand.LibraryFile.FileName
-  isSpec: "True"
-  fullName: NativeLand.LibraryFile.FileName
-  nameWithType: LibraryFile.FileName
-- uid: NativeLand.LibraryFile.Resource
-  name: Resource
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_Resource
-  commentId: P:NativeLand.LibraryFile.Resource
-  fullName: NativeLand.LibraryFile.Resource
-  nameWithType: LibraryFile.Resource
-- uid: NativeLand.LibraryFile.Resource*
-  name: Resource
-  href: api/NativeLand.LibraryFile.html#NativeLand_LibraryFile_Resource_
-  commentId: Overload:NativeLand.LibraryFile.Resource
-  isSpec: "True"
-  fullName: NativeLand.LibraryFile.Resource
-  nameWithType: LibraryFile.Resource
 - uid: NativeLand.LibraryItem
   name: LibraryItem
   href: api/NativeLand.LibraryItem.html
   commentId: T:NativeLand.LibraryItem
   fullName: NativeLand.LibraryItem
   nameWithType: LibraryItem
-- uid: NativeLand.LibraryItem.#ctor(NativeLand.Tools.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
-  name: LibraryItem(Platform, Architecture, params LibraryFile[])
-  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_NativeLand_Tools_Platform_System_Runtime_InteropServices_Architecture_NativeLand_LibraryFile___
-  commentId: M:NativeLand.LibraryItem.#ctor(NativeLand.Tools.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
-  name.vb: New(Platform, Architecture, ParamArray LibraryFile())
-  fullName: NativeLand.LibraryItem.LibraryItem(NativeLand.Tools.Platform, System.Runtime.InteropServices.Architecture, params NativeLand.LibraryFile[])
-  fullName.vb: NativeLand.LibraryItem.New(NativeLand.Tools.Platform, System.Runtime.InteropServices.Architecture, ParamArray NativeLand.LibraryFile())
-  nameWithType: LibraryItem.LibraryItem(Platform, Architecture, params LibraryFile[])
-  nameWithType.vb: LibraryItem.New(Platform, Architecture, ParamArray LibraryFile())
+- uid: NativeLand.LibraryItem.#ctor(NativeLand.Tools.Platform,System.Runtime.InteropServices.Architecture,System.String[])
+  name: LibraryItem(Platform, Architecture, params string[])
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_NativeLand_Tools_Platform_System_Runtime_InteropServices_Architecture_System_String___
+  commentId: M:NativeLand.LibraryItem.#ctor(NativeLand.Tools.Platform,System.Runtime.InteropServices.Architecture,System.String[])
+  name.vb: New(Platform, Architecture, ParamArray String())
+  fullName: NativeLand.LibraryItem.LibraryItem(NativeLand.Tools.Platform, System.Runtime.InteropServices.Architecture, params string[])
+  fullName.vb: NativeLand.LibraryItem.New(NativeLand.Tools.Platform, System.Runtime.InteropServices.Architecture, ParamArray String())
+  nameWithType: LibraryItem.LibraryItem(Platform, Architecture, params string[])
+  nameWithType.vb: LibraryItem.New(Platform, Architecture, ParamArray String())
 - uid: NativeLand.LibraryItem.#ctor*
   name: LibraryItem
   href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_
@@ -214,22 +150,6 @@ references:
   isSpec: "True"
   fullName: NativeLand.LibraryItem.Files
   nameWithType: LibraryItem.Files
-- uid: NativeLand.LibraryItem.LoadItem(System.String,System.Boolean)
-  name: LoadItem(string, bool)
-  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_LoadItem_System_String_System_Boolean_
-  commentId: M:NativeLand.LibraryItem.LoadItem(System.String,System.Boolean)
-  name.vb: LoadItem(String, Boolean)
-  fullName: NativeLand.LibraryItem.LoadItem(string, bool)
-  fullName.vb: NativeLand.LibraryItem.LoadItem(String, Boolean)
-  nameWithType: LibraryItem.LoadItem(string, bool)
-  nameWithType.vb: LibraryItem.LoadItem(String, Boolean)
-- uid: NativeLand.LibraryItem.LoadItem*
-  name: LoadItem
-  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_LoadItem_
-  commentId: Overload:NativeLand.LibraryItem.LoadItem
-  isSpec: "True"
-  fullName: NativeLand.LibraryItem.LoadItem
-  nameWithType: LibraryItem.LoadItem
 - uid: NativeLand.LibraryItem.Platform
   name: Platform
   href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem_Platform
@@ -267,15 +187,6 @@ references:
   fullName.vb: NativeLand.LibraryManager.New(ParamArray NativeLand.LibraryItem())
   nameWithType: LibraryManager.LibraryManager(params LibraryItem[])
   nameWithType.vb: LibraryManager.New(ParamArray LibraryItem())
-- uid: NativeLand.LibraryManager.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.LibraryItem[])
-  name: LibraryManager(string, ILoggerFactory, params LibraryItem[])
-  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager__ctor_System_String_Microsoft_Extensions_Logging_ILoggerFactory_NativeLand_LibraryItem___
-  commentId: M:NativeLand.LibraryManager.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.LibraryItem[])
-  name.vb: New(String, ILoggerFactory, ParamArray LibraryItem())
-  fullName: NativeLand.LibraryManager.LibraryManager(string, Microsoft.Extensions.Logging.ILoggerFactory, params NativeLand.LibraryItem[])
-  fullName.vb: NativeLand.LibraryManager.New(String, Microsoft.Extensions.Logging.ILoggerFactory, ParamArray NativeLand.LibraryItem())
-  nameWithType: LibraryManager.LibraryManager(string, ILoggerFactory, params LibraryItem[])
-  nameWithType.vb: LibraryManager.New(String, ILoggerFactory, ParamArray LibraryItem())
 - uid: NativeLand.LibraryManager.#ctor*
   name: LibraryManager
   href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager__ctor_
@@ -312,34 +223,12 @@ references:
   isSpec: "True"
   fullName: NativeLand.LibraryManager.GetPlatform
   nameWithType: LibraryManager.GetPlatform
-- uid: NativeLand.LibraryManager.LoadLibraryExplicit
-  name: LoadLibraryExplicit
-  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadLibraryExplicit
-  commentId: P:NativeLand.LibraryManager.LoadLibraryExplicit
-  fullName: NativeLand.LibraryManager.LoadLibraryExplicit
-  nameWithType: LibraryManager.LoadLibraryExplicit
-- uid: NativeLand.LibraryManager.LoadLibraryExplicit*
-  name: LoadLibraryExplicit
-  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadLibraryExplicit_
-  commentId: Overload:NativeLand.LibraryManager.LoadLibraryExplicit
-  isSpec: "True"
-  fullName: NativeLand.LibraryManager.LoadLibraryExplicit
-  nameWithType: LibraryManager.LoadLibraryExplicit
 - uid: NativeLand.LibraryManager.LoadNativeLibrary
   name: LoadNativeLibrary()
   href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadNativeLibrary
   commentId: M:NativeLand.LibraryManager.LoadNativeLibrary
   fullName: NativeLand.LibraryManager.LoadNativeLibrary()
   nameWithType: LibraryManager.LoadNativeLibrary()
-- uid: NativeLand.LibraryManager.LoadNativeLibrary(System.Boolean)
-  name: LoadNativeLibrary(bool)
-  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadNativeLibrary_System_Boolean_
-  commentId: M:NativeLand.LibraryManager.LoadNativeLibrary(System.Boolean)
-  name.vb: LoadNativeLibrary(Boolean)
-  fullName: NativeLand.LibraryManager.LoadNativeLibrary(bool)
-  fullName.vb: NativeLand.LibraryManager.LoadNativeLibrary(Boolean)
-  nameWithType: LibraryManager.LoadNativeLibrary(bool)
-  nameWithType.vb: LibraryManager.LoadNativeLibrary(Boolean)
 - uid: NativeLand.LibraryManager.LoadNativeLibrary*
   name: LoadNativeLibrary
   href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadNativeLibrary_
@@ -347,19 +236,6 @@ references:
   isSpec: "True"
   fullName: NativeLand.LibraryManager.LoadNativeLibrary
   nameWithType: LibraryManager.LoadNativeLibrary
-- uid: NativeLand.LibraryManager.TargetDirectory
-  name: TargetDirectory
-  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_TargetDirectory
-  commentId: P:NativeLand.LibraryManager.TargetDirectory
-  fullName: NativeLand.LibraryManager.TargetDirectory
-  nameWithType: LibraryManager.TargetDirectory
-- uid: NativeLand.LibraryManager.TargetDirectory*
-  name: TargetDirectory
-  href: api/NativeLand.LibraryManager.html#NativeLand_LibraryManager_TargetDirectory_
-  commentId: Overload:NativeLand.LibraryManager.TargetDirectory
-  isSpec: "True"
-  fullName: NativeLand.LibraryManager.TargetDirectory
-  nameWithType: LibraryManager.TargetDirectory
 - uid: NativeLand.Tools
   name: NativeLand.Tools
   href: api/NativeLand.Tools.html
@@ -425,44 +301,3 @@ references:
   commentId: F:NativeLand.Tools.Platform.Windows
   fullName: NativeLand.Tools.Platform.Windows
   nameWithType: Platform.Windows
-- uid: NativeLand.Tools.ResourceAccessor
-  name: ResourceAccessor
-  href: api/NativeLand.Tools.ResourceAccessor.html
-  commentId: T:NativeLand.Tools.ResourceAccessor
-  fullName: NativeLand.Tools.ResourceAccessor
-  nameWithType: ResourceAccessor
-- uid: NativeLand.Tools.ResourceAccessor.#ctor(System.Reflection.Assembly)
-  name: ResourceAccessor(Assembly)
-  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor__ctor_System_Reflection_Assembly_
-  commentId: M:NativeLand.Tools.ResourceAccessor.#ctor(System.Reflection.Assembly)
-  name.vb: New(Assembly)
-  fullName: NativeLand.Tools.ResourceAccessor.ResourceAccessor(System.Reflection.Assembly)
-  fullName.vb: NativeLand.Tools.ResourceAccessor.New(System.Reflection.Assembly)
-  nameWithType: ResourceAccessor.ResourceAccessor(Assembly)
-  nameWithType.vb: ResourceAccessor.New(Assembly)
-- uid: NativeLand.Tools.ResourceAccessor.#ctor*
-  name: ResourceAccessor
-  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor__ctor_
-  commentId: Overload:NativeLand.Tools.ResourceAccessor.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: NativeLand.Tools.ResourceAccessor.ResourceAccessor
-  fullName.vb: NativeLand.Tools.ResourceAccessor.New
-  nameWithType: ResourceAccessor.ResourceAccessor
-  nameWithType.vb: ResourceAccessor.New
-- uid: NativeLand.Tools.ResourceAccessor.Binary(System.String)
-  name: Binary(string)
-  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor_Binary_System_String_
-  commentId: M:NativeLand.Tools.ResourceAccessor.Binary(System.String)
-  name.vb: Binary(String)
-  fullName: NativeLand.Tools.ResourceAccessor.Binary(string)
-  fullName.vb: NativeLand.Tools.ResourceAccessor.Binary(String)
-  nameWithType: ResourceAccessor.Binary(string)
-  nameWithType.vb: ResourceAccessor.Binary(String)
-- uid: NativeLand.Tools.ResourceAccessor.Binary*
-  name: Binary
-  href: api/NativeLand.Tools.ResourceAccessor.html#NativeLand_Tools_ResourceAccessor_Binary_
-  commentId: Overload:NativeLand.Tools.ResourceAccessor.Binary
-  isSpec: "True"
-  fullName: NativeLand.Tools.ResourceAccessor.Binary
-  nameWithType: ResourceAccessor.Binary
