@@ -15,36 +15,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Exceptions.NoBinaryForPlatformException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NativeLand.Exceptions.NoBinaryForPlatformException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Exceptions.UnsupportedPlatformException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NativeLand.Exceptions.UnsupportedPlatformException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Exceptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NativeLand.Exceptions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/NativeLand.LibraryFile.yml",
       "output": {
         ".html": {
@@ -75,40 +45,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Tools.PathHelper.yml",
+      "source_relative_path": "api/NativeLand.Platform.yml",
       "output": {
         ".html": {
-          "relative_path": "api/NativeLand.Tools.PathHelper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Tools.Platform.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NativeLand.Tools.Platform.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Tools.ResourceAccessor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NativeLand.Tools.ResourceAccessor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Tools.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NativeLand.Tools.html"
+          "relative_path": "api/NativeLand.Platform.html"
         }
       },
       "version": ""

@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class LibraryFile | NativeLand API - Aptivi ">
     
-    <meta name="description" content="A class to store the information about native library file.">
+    <meta name="description" content="A class to store information about a native library file or a stream.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -81,7 +81,7 @@
 
 
   <h1 id="NativeLand_LibraryFile" data-uid="NativeLand.LibraryFile" class="text-break">Class LibraryFile</h1>
-  <div class="markdown level0 summary"><p>A class to store the information about native library file.</p>
+  <div class="markdown level0 summary"><p>A class to store information about a native library file or a stream.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -99,19 +99,19 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/NativeLand/new/main/apiSpec/new?filename=NativeLand_LibraryFile__ctor_System_String_System_Byte___.md&amp;value=---%0Auid%3A%20NativeLand.LibraryFile.%23ctor(System.String%2CSystem.Byte%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/NativeLand/new/main/apiSpec/new?filename=NativeLand_LibraryFile__ctor_System_String_.md&amp;value=---%0Auid%3A%20NativeLand.LibraryFile.%23ctor(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L32">View Source</a>
+    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L41">View Source</a>
   </span>
   <a id="NativeLand_LibraryFile__ctor_" data-uid="NativeLand.LibraryFile.#ctor*"></a>
-  <h4 id="NativeLand_LibraryFile__ctor_System_String_System_Byte___" data-uid="NativeLand.LibraryFile.#ctor(System.String,System.Byte[])">LibraryFile(string, byte[])</h4>
-  <div class="markdown level1 summary"><p>Makes a new instance of this class</p>
+  <h4 id="NativeLand_LibraryFile__ctor_System_String_" data-uid="NativeLand.LibraryFile.#ctor(System.String)">LibraryFile(string)</h4>
+  <div class="markdown level1 summary"><p>Initializes the library file class instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LibraryFile(string fileName, byte[] resource)</code></pre>
+    <pre><code class="lang-csharp hljs">public LibraryFile(string filePath)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -125,14 +125,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fileName</span></td>
-        <td><p>Filename to use when extracting the library.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
-        <td><span class="parametername">resource</span></td>
-        <td><p>Library binary.</p>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Path to the native library file.</p>
 </td>
       </tr>
     </tbody>
@@ -141,55 +135,19 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/NativeLand/new/main/apiSpec/new?filename=NativeLand_LibraryFile_CanLoadExplicitly.md&amp;value=---%0Auid%3A%20NativeLand.LibraryFile.CanLoadExplicitly%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/NativeLand/new/main/apiSpec/new?filename=NativeLand_LibraryFile_FilePath.md&amp;value=---%0Auid%3A%20NativeLand.LibraryFile.FilePath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L58">View Source</a>
+    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L35">View Source</a>
   </span>
-  <a id="NativeLand_LibraryFile_CanLoadExplicitly_" data-uid="NativeLand.LibraryFile.CanLoadExplicitly*"></a>
-  <h4 id="NativeLand_LibraryFile_CanLoadExplicitly" data-uid="NativeLand.LibraryFile.CanLoadExplicitly">CanLoadExplicitly</h4>
-  <div class="markdown level1 summary"><p>Specifies whether this file is a shared library, which can be loaded explicitly with</p>
-<pre><code class="lang-csharp">LoadLibraryEx</code></pre> on Windows and <pre><code class="lang-csharp">dlopen</code></pre> on Linux and MacOs.
-<p>Default is <pre><code class="lang-csharp">True</code></pre>, but explicit loading is disabled by default with
-<a class="xref" href="NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadLibraryExplicit">LoadLibraryExplicit</a>.
-<p>Set this to <pre><code class="lang-csharp">False</code></pre> if this file is not a library, but a supporting file which
-shouldn't be loaded explicitly when <a class="xref" href="NativeLand.LibraryManager.html#NativeLand_LibraryManager_LoadLibraryExplicit">LoadLibraryExplicit</a> is <pre><code class="lang-csharp">True</code></pre>.
+  <a id="NativeLand_LibraryFile_FilePath_" data-uid="NativeLand.LibraryFile.FilePath*"></a>
+  <h4 id="NativeLand_LibraryFile_FilePath" data-uid="NativeLand.LibraryFile.FilePath">FilePath</h4>
+  <div class="markdown level1 summary"><p>Path to the native library file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanLoadExplicitly { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/NativeLand/new/main/apiSpec/new?filename=NativeLand_LibraryFile_FileName.md&amp;value=---%0Auid%3A%20NativeLand.LibraryFile.FileName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L41">View Source</a>
-  </span>
-  <a id="NativeLand_LibraryFile_FileName_" data-uid="NativeLand.LibraryFile.FileName*"></a>
-  <h4 id="NativeLand_LibraryFile_FileName" data-uid="NativeLand.LibraryFile.FileName">FileName</h4>
-  <div class="markdown level1 summary"><p>Filename to use when extracting the library.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FileName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string FilePath { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -202,37 +160,6 @@ shouldn't be loaded explicitly when <a class="xref" href="NativeLand.LibraryMana
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/NativeLand/new/main/apiSpec/new?filename=NativeLand_LibraryFile_Resource.md&amp;value=---%0Auid%3A%20NativeLand.LibraryFile.Resource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L46">View Source</a>
-  </span>
-  <a id="NativeLand_LibraryFile_Resource_" data-uid="NativeLand.LibraryFile.Resource*"></a>
-  <h4 id="NativeLand_LibraryFile_Resource" data-uid="NativeLand.LibraryFile.Resource">Resource</h4>
-  <div class="markdown level1 summary"><p>Library binary.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] Resource { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -249,7 +176,7 @@ shouldn't be loaded explicitly when <a class="xref" href="NativeLand.LibraryMana
                     <a href="https://github.com/Aptivi/NativeLand/new/main/apiSpec/new?filename=NativeLand_LibraryFile.md&amp;value=---%0Auid%3A%20NativeLand.LibraryFile%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/NativeLand/blob/main/NativeLand/LibraryFile.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
