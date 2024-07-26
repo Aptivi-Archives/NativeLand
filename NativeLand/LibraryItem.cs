@@ -116,7 +116,16 @@ namespace NativeLand
                     if (PlatformHelper.IsRunningFromMono())
                         result = Mono.dlsym(file.handle, symbolName);
                     else
-                        result = Linux.dlsym(file.handle, symbolName);
+                    {
+                        try
+                        {
+                            result = Linux.dlsym(file.handle, symbolName);
+                        }
+                        catch
+                        {
+                            result = Linux.dlsym_new(file.handle, symbolName);
+                        }
+                    }
                     found = result != IntPtr.Zero;
                 }
                 else

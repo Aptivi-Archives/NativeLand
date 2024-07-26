@@ -95,7 +95,7 @@ namespace TestProcess
                 new LibraryItem(Platform.Linux, Architecture.X64,
                     new LibraryFile(tempDir + @"/libTestLib.so")),
                 new LibraryItem(Platform.Linux, Architecture.Arm64,
-                    new LibraryFile(tempDir + @"/libTestLib.so")));
+                    new LibraryFile(tempDir + @"/libTestLib_Arm64.so")));
 
             // Load the library
             libManager.LoadNativeLibrary();
