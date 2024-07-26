@@ -45,6 +45,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.LibraryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.LibraryFile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NativeLand.LibraryItem.yml",
       "output": {
         ".html": {
@@ -79,6 +89,16 @@
       "output": {
         ".html": {
           "relative_path": "api/NativeLand.Tools.Platform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NativeLand.Tools.ResourceAccessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NativeLand.Tools.ResourceAccessor.html"
         }
       },
       "version": ""
