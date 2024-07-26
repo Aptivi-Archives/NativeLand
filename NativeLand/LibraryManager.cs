@@ -18,100 +18,24 @@
 //
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
-using NativeLand.Exceptions;
-using NativeLand.Tools;
+using SpecProbe.Platform;
 
 namespace NativeLand
 {
     /// <summary>
-    /// A class to manage, extract and load native implementations of dependent libraries.
+    /// Library managment class
     /// </summary>
     public class LibraryManager
 	{
-		private readonly object _resourceLocker = new object();
-		private readonly LibraryItemInternal[] _items;
-		private readonly ILogger<LibraryManager> _logger;
-
 		private bool _libLoaded = false;
-
-		/// <summary>
-		/// Creates a new library manager which extracts to environment current directory by default.
-		/// </summary>
-		/// <param name="items">Library binaries for different platforms.</param>
-		public LibraryManager(params LibraryItem[] items)
-			: this(Environment.CurrentDirectory, false, null, items)
-		{
-		}
-		
-		/// <summary>
-		/// Creates a new library manager which extracts to environment current directory by default.
-		/// </summary>
-		/// <param name="loggerFactory">Logger factory.</param>
-		/// <param name="items">Library binaries for different platforms.</param>
-		public LibraryManager(ILoggerFactory loggerFactory, params LibraryItem[] items)
-			: this(Environment.CurrentDirectory, false, loggerFactory, items)
-		{
-		}
-
-		/// <summary>
-		/// Creates a new library manager which extracts to a custom directory.
-		///
-		/// IMPORTANT! Be sure this directory is discoverable by system library loader. Otherwise, your library won't be loaded.
-		/// </summary>
-		/// <param name="targetDirectory">Target directory to extract the libraries.</param>
-		/// <param name="loggerFactory">Logger factory.</param>
-		/// <param name="items">Library binaries for different platforms.</param>
-		public LibraryManager(string targetDirectory, ILoggerFactory loggerFactory, params LibraryItem[] items)
-			: this(targetDirectory, true, loggerFactory, items)
-		{
-		}
-		
-		private LibraryManager(string targetDirectory, bool customDirectory, ILoggerFactory loggerFactory, params LibraryItem[] items)
-		{
-			TargetDirectory = targetDirectory;
-			var itemLogger = loggerFactory?.CreateLogger<LibraryItem>();
-
-			_logger = loggerFactory?.CreateLogger<LibraryManager>();
-			_items = items.Select(x => new LibraryItemInternal(x, itemLogger)).ToArray();
-
-			if (customDirectory)
-			{
-				_logger?.LogWarning("Custom directory for native libraries is specified. Be sure it is discoverable by system library loader.");
-			}
-		}
-
-		/// <summary>
-		/// Target directory to which native libraries will be extracted. Defaults to directory
-		/// in which targetAssembly, passed to <see cref="LibraryManager"/> constructor, resides.
-		/// </summary>
-		public string TargetDirectory { get; }
-		
-		/// <summary>
-		/// Defines whether shared libraries will be loaded explicitly. <code>LoadLibraryEx</code> is
-		/// used on Windows and <code>dlopen</code> is used on Linux and MacOs to load libraries
-		/// explicitly.
-		///
-		/// WARNING! Explicit library loading on MacOs IS USELESS, and your P/Invoke call will fail unless
-		/// library path is discoverable by system library loader.
-		/// </summary>
-		public bool LoadLibraryExplicit { get; set; } = false;
-
-		/// <summary>
-		/// Extract and load native library based on current platform and process bitness.
-		/// Throws an exception if current platform is not supported.
-		/// </summary>
-		/// <param name="loadLibrary">
-		/// Use LoadLibrary API call on Windows to explicitly load library into the process.
-		/// </param>
-		[Obsolete("This method is obsolete. Use LoadLibraryExplicit property.")]
-		public void LoadNativeLibrary(bool loadLibrary)
-		{
-			LoadNativeLibrary();
-        }
+		private readonly object _resourceLocker = new();
+		private readonly LibraryItem[] _items;
+		private readonly ILogger<LibraryManager> _logger;
 		
 		/// <summary>
 		/// Extract and load native library based on current platform and process bitness.
@@ -119,71 +43,97 @@ namespace NativeLand
 		/// </summary>
 		public void LoadNativeLibrary()
 		{
-			if (_libLoaded)
-			{
-				return;
-			}
-
 			lock (_resourceLocker)
 			{
+                // We need not to do anything if the library is loaded
 				if (_libLoaded)
-				{
 					return;
-				}
 
+                // Load the native library when we find an item that is compatible with our system
+                // architecture and type
 				var item = FindItem();
+                _logger?.LogInformation($"Found item for {item.Platform}, {item.Bitness}");
+                item.LoadItem();
 
-				if (item.Platform == Platform.MacOS && LoadLibraryExplicit)
-				{
-					_logger?.LogWarning("Current platform is MacOS and LoadLibraryExplicit is specified. Explicit library loading on MacOs IS USELESS, and your P/Invoke call will fail unless library path is discoverable by system library loader.");
-				}
-				
-				item.LoadItem(TargetDirectory, LoadLibraryExplicit);
-
+                // Set internal flag to let applications know
 				_libLoaded = true;
 			}
 		}
 
-		/// <summary>
-		/// Finds a library item based on current platform and bitness.
-		/// </summary>
-		/// <returns>Library item based on platform and bitness.</returns>
-		/// <exception cref="NoBinaryForPlatformException"></exception>
-		public LibraryItem FindItem()
+        /// <summary>
+        /// Finds a library item based on current platform and bitness.
+        /// </summary>
+        /// <returns>Library item based on platform and bitness.</returns>
+        /// <exception cref="PlatformNotSupportedException"></exception>
+        public LibraryItem FindItem()
 		{
+            // Get the platform and the bitness
 			var platform = GetPlatform();
 			var bitness = RuntimeInformation.OSArchitecture;
             bitness = bitness == Architecture.X64 ? RuntimeInformation.ProcessArchitecture : bitness;
 
-            var item = _items.FirstOrDefault(x => x.Platform == platform && x.Bitness == bitness) ??
-                throw new NoBinaryForPlatformException($"There is no supported native library for platform '{platform}' and bitness '{bitness}'");
+            // Now, try to get a library item
+            var item = _items.SingleOrDefault(x => x.Platform == platform && x.Bitness == bitness) ??
+                throw new PlatformNotSupportedException($"There is no supported native library for platform '{platform}' and bitness '{bitness}'");
             return item;
         }
 
-		/// <summary>
-		/// Gets the platform type.
-		/// </summary>
-		/// <exception cref="UnsupportedPlatformException">Thrown when platform is not supported.</exception>
-		public static Platform GetPlatform()
+        /// <summary>
+        /// Gets the native method delegate
+        /// </summary>
+        /// <typeparam name="T">Target type</typeparam>
+        /// <param name="methodName">Native method name</param>
+        /// <returns></returns>
+        public T GetNativeMethodDelegate<T>(string methodName)
+            where T : class
+        {
+            var item = FindItem();
+            var @delegate = item.GetNativeMethodDelegate<T>(methodName);
+            return @delegate;
+        }
+
+		private static Platform GetPlatform()
 		{
-			string windir = Environment.GetEnvironmentVariable("windir");
-			if ((!string.IsNullOrEmpty(windir) && windir.Contains(@"\") && Directory.Exists(windir)) ||
-                Environment.OSVersion.Platform == PlatformID.Win32NT)
+			if (PlatformHelper.IsOnWindows())
 				return Platform.Windows;
-			else if (File.Exists(@"/proc/sys/kernel/ostype"))
-			{
-				string osType = File.ReadAllText(@"/proc/sys/kernel/ostype");
-				if (osType.StartsWith("Linux", StringComparison.OrdinalIgnoreCase))
-					return Platform.Linux;
-				else
-					throw new UnsupportedPlatformException($"Unsupported OS: {osType}");
-            }
-            else if (File.Exists(@"/System/Library/CoreServices/SystemVersion.plist"))
+            else if (PlatformHelper.IsOnMacOS())
 				return Platform.MacOS;
-            else if (Environment.OSVersion.Platform == PlatformID.Unix)
+            else if (PlatformHelper.IsOnUnix())
                 return Platform.Linux;
 			else
-				throw new UnsupportedPlatformException("Unsupported OS!");
+				throw new PlatformNotSupportedException("This operating system is not supported.");
+		}
+
+        /// <summary>
+        /// Creates a new library manager.
+        /// </summary>
+        /// <param name="items">Library binaries for different platforms.</param>
+        public LibraryManager(params LibraryItem[] items)
+			: this(null, items)
+		{ }
+		
+		/// <summary>
+		/// Creates a new library manager.
+		/// </summary>
+		/// <param name="loggerFactory">Logger factory.</param>
+		/// <param name="items">Library binaries for different platforms.</param>
+		public LibraryManager(ILoggerFactory loggerFactory, params LibraryItem[] items)
+		{
+			_logger = loggerFactory?.CreateLogger<LibraryManager>();
+
+            // Check the items
+            if (items is null || items.Length == 0)
+                throw new ArgumentNullException(nameof(items), "Provide library items.");
+            List<(Platform, Architecture)> processed = [];
+            foreach (var item in items)
+            {
+                var platform = item.Platform;
+                var architecture = item.Bitness;
+                if (processed.Contains((platform, architecture)))
+                    throw new Exception($"Duplicate library items found. [{nameof(platform)}: {platform} | {nameof(architecture)}: {architecture}]");
+                processed.Add((platform, architecture));
+            }
+			_items = items;
 		}
 	}
 }

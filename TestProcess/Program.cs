@@ -26,6 +26,7 @@ using NativeLand;
 using NativeLand.Tools;
 using Serilog;
 using Serilog.Extensions.Logging;
+using SpecProbe.Platform;
 
 namespace TestProcess
 {
@@ -39,7 +40,7 @@ namespace TestProcess
                 .MinimumLevel.Debug()
                 .WriteTo.Console()
                 .CreateLogger();
-            var factory = new LoggerFactory(new[] {new SerilogLoggerProvider() });
+            var factory = new LoggerFactory([new SerilogLoggerProvider()]);
 
             _factory = factory;
             try
@@ -55,8 +56,7 @@ namespace TestProcess
 
             try
             {
-                CanLoadLibraryFromCurrentDirAndCallFunction();
-                CanLoadLibraryFromTempDirAndCallFunction();
+                CanLoadLibraryAndCallFunction();
                 return 0;
             }
             catch (Exception e)
@@ -66,66 +66,50 @@ namespace TestProcess
             }
         }
 
-        private static int CanLoadLibraryFromCurrentDirAndCallFunction()
+        private static int CanLoadLibraryAndCallFunction()
         {
-            var accessor = new ResourceAccessor(Assembly.GetExecutingAssembly());
-            var libManager = new LibraryManager(
-                _factory,
-                new LibraryItem(Platform.MacOS, Architecture.X64,
-                    new LibraryFile("libTestLib.dylib", accessor.Binary("libTestLib.dylib"))),
-                new LibraryItem(Platform.Windows, Architecture.X64,
-                    new LibraryFile("TestLib.dll", accessor.Binary("TestLib.dll"))),
-                new LibraryItem(Platform.Linux, Architecture.X64,
-                    new LibraryFile("libTestLib.so", accessor.Binary("libTestLib.so"))),
-                new LibraryItem(Platform.Linux, Architecture.Arm64,
-                    new LibraryFile("libTestLib.so", accessor.Binary("libTestLib_Arm64.so"))));
-
-            libManager.LoadNativeLibrary();
-
-            int result = hello();
-
-            Log.ForContext<Program>().Information($"Function result is {result}");
-
-            return result == 42 ? 0 : 1;
-        }
-
-        private static int CanLoadLibraryFromTempDirAndCallFunction()
-        {
+            // Make a temp directory
             string tempDir = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString("N"));
             Directory.CreateDirectory(tempDir);
 
+            // Copy libraries
             var accessor = new ResourceAccessor(Assembly.GetExecutingAssembly());
-            var libManager = new LibraryManager(
-                tempDir,
-                _factory,
-                new LibraryItem(Platform.MacOS, Architecture.X64,
-                    new LibraryFile("libTestLib.dylib", accessor.Binary("libTestLib.dylib"))),
-                new LibraryItem(Platform.Windows, Architecture.X64,
-                    new LibraryFile("TestLib.dll", accessor.Binary("TestLib.dll"))),
-                new LibraryItem(Platform.Linux, Architecture.X64,
-                    new LibraryFile("libTestLib.so", accessor.Binary("libTestLib.so"))),
-                new LibraryItem(Platform.Linux, Architecture.Arm64,
-                    new LibraryFile("libTestLib.so", accessor.Binary("libTestLib_Arm64.so"))))
+            if (PlatformHelper.IsOnWindows())
+                File.WriteAllBytes(tempDir + @"\TestLib.dll", accessor.Binary("TestLib.dll"));
+            else if (PlatformHelper.IsOnMacOS())
+                File.WriteAllBytes(tempDir + @"/libTestLib.dylib", accessor.Binary("libTestLib.dylib"));
+            else if (PlatformHelper.IsOnUnix())
             {
-                LoadLibraryExplicit = true
-            };
+                if (PlatformHelper.IsOnArm64())
+                    File.WriteAllBytes(tempDir + @"/libTestLib_Arm64.so", accessor.Binary("libTestLib_Arm64.so"));
+                else
+                    File.WriteAllBytes(tempDir + @"/libTestLib.so", accessor.Binary("libTestLib.so"));
+            }
 
-            var item = libManager.FindItem();
+            // Now, create a library manager
+            var libManager = new LibraryManager(
+                new LibraryItem(Platform.Windows, Architecture.X64,
+                    new LibraryFile(tempDir + @"\TestLib.dll")),
+                new LibraryItem(Platform.MacOS, Architecture.X64,
+                    new LibraryFile(tempDir + @"/libTestLib.dylib")),
+                new LibraryItem(Platform.Linux, Architecture.X64,
+                    new LibraryFile(tempDir + @"/libTestLib.so")),
+                new LibraryItem(Platform.Linux, Architecture.Arm64,
+                    new LibraryFile(tempDir + @"/libTestLib.so")));
+
+            // Load the library
             libManager.LoadNativeLibrary();
 
+            // Get the hello result from the delegate
             int result;
             try
             {
-                result = hello();
+                var @delegate = libManager.GetNativeMethodDelegate<Hello>("hello");
+                result = @delegate.Invoke();
             }
-            catch (DllNotFoundException)
+            catch (Exception ex)
             {
-                if (item.Platform == Platform.MacOS)
-                {
-                    Log.ForContext<Program>().Warning("Hit an expected exception on MacOS. Skipping test.");
-                    return 0;
-                }
-
+                Log.ForContext<Program>().Error(ex, "Fatal exception with the SpecProbe library, most likely becuase the library wasn't loaded.");
                 throw;
             }
 
@@ -133,8 +117,7 @@ namespace TestProcess
 
             return result == 42 ? 0 : 1;
         }
-
-        [DllImport("TestLib")]
-        private static extern int hello();
+        
+        private delegate int Hello();
     }
 }

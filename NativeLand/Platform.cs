@@ -17,8 +17,9 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-namespace NativeLand.Tools
+namespace NativeLand
 {
+    // TODO: Move this to SpecProbe.
     /// <summary>
     /// Platform (operating system).
     /// </summary>

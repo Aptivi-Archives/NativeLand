@@ -1,4 +1,4 @@
-//
+﻿//
 // NativeLand  Copyright (C) 2023-2024  Aptivi
 //
 // This file is part of NativeLand
@@ -49,18 +49,12 @@ namespace NativeLand.Tools
         /// </exception>
         public byte[] Binary(string name)
         {
-            using (var stream = new MemoryStream())
-            {
-                var resource = _assembly.GetManifestResourceStream(GetName(name));
-                if (resource == null)
-                {
-                    throw new InvalidOperationException("Resource not available.");
-                }
+            using var stream = new MemoryStream();
+            var resource = _assembly.GetManifestResourceStream(GetName(name)) ??
+                throw new InvalidOperationException("Resource not available.");
+            resource.CopyTo(stream);
 
-                resource.CopyTo(stream);
-
-                return stream.ToArray();
-            }
+            return stream.ToArray();
         }
 
         private string GetName(string name) =>

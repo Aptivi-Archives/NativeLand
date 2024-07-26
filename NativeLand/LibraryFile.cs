@@ -17,44 +17,32 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System;
+using System.IO;
+
 namespace NativeLand
 {
 	/// <summary>
-	/// A class to store the information about native library file.
+	/// A class to store information about a native library file or a stream.
 	/// </summary>
 	public class LibraryFile
-	{
-		/// <summary>
-		/// Makes a new instance of this class
-		/// </summary>
-		/// <param name="fileName">Filename to use when extracting the library.</param>
-		/// <param name="resource">Library binary.</param>
-		public LibraryFile(string fileName, byte[] resource)
+    {
+        internal IntPtr handle = IntPtr.Zero;
+
+        /// <summary>
+        /// Path to the native library file.
+        /// </summary>
+        public string FilePath { get; }
+
+        /// <summary>
+        /// Initializes the library file class instance
+        /// </summary>
+        /// <param name="filePath">Path to the native library file.</param>
+        public LibraryFile(string filePath)
 		{
-			FileName = fileName;
-			Resource = resource;
+            if (string.IsNullOrEmpty(filePath))
+                throw new ArgumentNullException(nameof(filePath), "Path to the native library file is not specified");
+            FilePath = filePath;
 		}
-
-		/// <summary>
-		/// Filename to use when extracting the library.
-		/// </summary>
-		public string FileName { get; set; }
-
-		/// <summary>
-		/// Library binary.
-		/// </summary>
-		public byte[] Resource { get; set; }
-
-		/// <summary>
-		/// Specifies whether this file is a shared library, which can be loaded explicitly with
-		/// <code>LoadLibraryEx</code> on Windows and <code>dlopen</code> on Linux and MacOs.
-		///
-		/// Default is <code>True</code>, but explicit loading is disabled by default with
-		/// <see cref="LibraryManager.LoadLibraryExplicit"/>.
-		///
-		/// Set this to <code>False</code> if this file is not a library, but a supporting file which
-		/// shouldn't be loaded explicitly when <see cref="LibraryManager.LoadLibraryExplicit"/> is <code>True</code>. 
-		/// </summary>
-		public bool CanLoadExplicitly { get; set; } = true;
 	}
 }
