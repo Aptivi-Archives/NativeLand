@@ -18,7 +18,7 @@
 //
 
 using Microsoft.Extensions.Logging;
-using SpecProbe.Platform;
+using SpecProbe.Software.Platform;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;

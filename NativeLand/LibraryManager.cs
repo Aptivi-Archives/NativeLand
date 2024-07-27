@@ -19,11 +19,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
-using SpecProbe.Platform;
+using SpecProbe.Software.Platform;
 
 namespace NativeLand
 {

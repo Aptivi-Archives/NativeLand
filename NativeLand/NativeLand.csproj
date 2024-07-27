@@ -36,7 +36,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
-    <PackageReference Include="SpecProbe.Software" Version="1.5.0" />
+    <PackageReference Include="SpecProbe.Software" Version="1.6.0" />
   </ItemGroup>
 
 </Project>

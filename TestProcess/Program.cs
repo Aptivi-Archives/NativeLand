@@ -25,7 +25,7 @@ using Microsoft.Extensions.Logging;
 using NativeLand;
 using Serilog;
 using Serilog.Extensions.Logging;
-using SpecProbe.Platform;
+using SpecProbe.Software.Platform;
 
 namespace TestProcess
 {
