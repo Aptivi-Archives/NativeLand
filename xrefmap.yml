@@ -51,22 +51,22 @@ references:
   commentId: T:NativeLand.LibraryItem
   fullName: NativeLand.LibraryItem
   nameWithType: LibraryItem
-- uid: NativeLand.LibraryItem.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
+- uid: NativeLand.LibraryItem.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,SpecProbe.Software.Platform.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
   name: LibraryItem(ILoggerFactory, Platform, Architecture, params LibraryFile[])
-  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_Microsoft_Extensions_Logging_ILoggerFactory_NativeLand_Platform_System_Runtime_InteropServices_Architecture_NativeLand_LibraryFile___
-  commentId: M:NativeLand.LibraryItem.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,NativeLand.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_Microsoft_Extensions_Logging_ILoggerFactory_SpecProbe_Software_Platform_Platform_System_Runtime_InteropServices_Architecture_NativeLand_LibraryFile___
+  commentId: M:NativeLand.LibraryItem.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,SpecProbe.Software.Platform.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
   name.vb: New(ILoggerFactory, Platform, Architecture, ParamArray LibraryFile())
-  fullName: NativeLand.LibraryItem.LibraryItem(Microsoft.Extensions.Logging.ILoggerFactory, NativeLand.Platform, System.Runtime.InteropServices.Architecture, params NativeLand.LibraryFile[])
-  fullName.vb: NativeLand.LibraryItem.New(Microsoft.Extensions.Logging.ILoggerFactory, NativeLand.Platform, System.Runtime.InteropServices.Architecture, ParamArray NativeLand.LibraryFile())
+  fullName: NativeLand.LibraryItem.LibraryItem(Microsoft.Extensions.Logging.ILoggerFactory, SpecProbe.Software.Platform.Platform, System.Runtime.InteropServices.Architecture, params NativeLand.LibraryFile[])
+  fullName.vb: NativeLand.LibraryItem.New(Microsoft.Extensions.Logging.ILoggerFactory, SpecProbe.Software.Platform.Platform, System.Runtime.InteropServices.Architecture, ParamArray NativeLand.LibraryFile())
   nameWithType: LibraryItem.LibraryItem(ILoggerFactory, Platform, Architecture, params LibraryFile[])
   nameWithType.vb: LibraryItem.New(ILoggerFactory, Platform, Architecture, ParamArray LibraryFile())
-- uid: NativeLand.LibraryItem.#ctor(NativeLand.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
+- uid: NativeLand.LibraryItem.#ctor(SpecProbe.Software.Platform.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
   name: LibraryItem(Platform, Architecture, params LibraryFile[])
-  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_NativeLand_Platform_System_Runtime_InteropServices_Architecture_NativeLand_LibraryFile___
-  commentId: M:NativeLand.LibraryItem.#ctor(NativeLand.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
+  href: api/NativeLand.LibraryItem.html#NativeLand_LibraryItem__ctor_SpecProbe_Software_Platform_Platform_System_Runtime_InteropServices_Architecture_NativeLand_LibraryFile___
+  commentId: M:NativeLand.LibraryItem.#ctor(SpecProbe.Software.Platform.Platform,System.Runtime.InteropServices.Architecture,NativeLand.LibraryFile[])
   name.vb: New(Platform, Architecture, ParamArray LibraryFile())
-  fullName: NativeLand.LibraryItem.LibraryItem(NativeLand.Platform, System.Runtime.InteropServices.Architecture, params NativeLand.LibraryFile[])
-  fullName.vb: NativeLand.LibraryItem.New(NativeLand.Platform, System.Runtime.InteropServices.Architecture, ParamArray NativeLand.LibraryFile())
+  fullName: NativeLand.LibraryItem.LibraryItem(SpecProbe.Software.Platform.Platform, System.Runtime.InteropServices.Architecture, params NativeLand.LibraryFile[])
+  fullName.vb: NativeLand.LibraryItem.New(SpecProbe.Software.Platform.Platform, System.Runtime.InteropServices.Architecture, ParamArray NativeLand.LibraryFile())
   nameWithType: LibraryItem.LibraryItem(Platform, Architecture, params LibraryFile[])
   nameWithType.vb: LibraryItem.New(Platform, Architecture, ParamArray LibraryFile())
 - uid: NativeLand.LibraryItem.#ctor*
@@ -194,27 +194,3 @@ references:
   isSpec: "True"
   fullName: NativeLand.LibraryManager.LoadNativeLibrary
   nameWithType: LibraryManager.LoadNativeLibrary
-- uid: NativeLand.Platform
-  name: Platform
-  href: api/NativeLand.Platform.html
-  commentId: T:NativeLand.Platform
-  fullName: NativeLand.Platform
-  nameWithType: Platform
-- uid: NativeLand.Platform.Linux
-  name: Linux
-  href: api/NativeLand.Platform.html#NativeLand_Platform_Linux
-  commentId: F:NativeLand.Platform.Linux
-  fullName: NativeLand.Platform.Linux
-  nameWithType: Platform.Linux
-- uid: NativeLand.Platform.MacOS
-  name: MacOS
-  href: api/NativeLand.Platform.html#NativeLand_Platform_MacOS
-  commentId: F:NativeLand.Platform.MacOS
-  fullName: NativeLand.Platform.MacOS
-  nameWithType: Platform.MacOS
-- uid: NativeLand.Platform.Windows
-  name: Windows
-  href: api/NativeLand.Platform.html#NativeLand_Platform_Windows
-  commentId: F:NativeLand.Platform.Windows
-  fullName: NativeLand.Platform.Windows
-  nameWithType: Platform.Windows

@@ -14,15 +14,10 @@
     "title": "Class LibraryManager | NativeLand API - Aptivi",
     "keywords": "Class LibraryManager Library managment class Inheritance object LibraryManager Namespace: NativeLand Assembly: NativeLand.dll Syntax public class LibraryManager Constructors | Edit this page View Source LibraryManager(ILoggerFactory, params LibraryItem[]) Creates a new library manager. Declaration public LibraryManager(ILoggerFactory loggerFactory, params LibraryItem[] items) Parameters Type Name Description ILoggerFactory loggerFactory Logger factory. LibraryItem[] items Library binaries for different platforms. | Edit this page View Source LibraryManager(params LibraryItem[]) Creates a new library manager. Declaration public LibraryManager(params LibraryItem[] items) Parameters Type Name Description LibraryItem[] items Library binaries for different platforms. Methods | Edit this page View Source FindItem() Finds a library item based on current platform and bitness. Declaration public LibraryItem FindItem() Returns Type Description LibraryItem Library item based on platform and bitness. Exceptions Type Condition PlatformNotSupportedException | Edit this page View Source GetNativeMethodDelegate<T>(string) Gets the native method delegate Declaration public T GetNativeMethodDelegate<T>(string methodName) where T : class Parameters Type Name Description string methodName Native method name Returns Type Description T Type Parameters Name Description T Target type | Edit this page View Source LoadNativeLibrary() Extract and load native library based on current platform and process bitness. Throws an exception if current platform is not supported. Declaration public void LoadNativeLibrary()"
   },
-  "api/NativeLand.Platform.html": {
-    "href": "api/NativeLand.Platform.html",
-    "title": "Enum Platform | NativeLand API - Aptivi",
-    "keywords": "Enum Platform Platform (operating system). Namespace: NativeLand Assembly: NativeLand.dll Syntax public enum Platform Fields Name Description Linux Linux platform. MacOS MacOS platform. Windows Windows platform."
-  },
   "api/NativeLand.html": {
     "href": "api/NativeLand.html",
     "title": "Namespace NativeLand | NativeLand API - Aptivi",
-    "keywords": "Namespace NativeLand Classes LibraryFile A class to store information about a native library file or a stream. LibraryItem Library binaries for specified platform and bitness. LibraryManager Library managment class Enums Platform Platform (operating system)."
+    "keywords": "Namespace NativeLand Classes LibraryFile A class to store information about a native library file or a stream. LibraryItem Library binaries for specified platform and bitness. LibraryManager Library managment class"
   },
   "index.html": {
     "href": "index.html",

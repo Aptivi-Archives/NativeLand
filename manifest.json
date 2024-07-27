@@ -45,16 +45,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/NativeLand.Platform.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NativeLand.Platform.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/NativeLand.yml",
       "output": {
         ".html": {
