@@ -16,6 +16,8 @@
     
 *A C# library for loading native libraries.*
 
+**WARNING: This library is going to be replaced with SpecProbe v2.x.x, which is coming soon.**
+
 <br>
 <br>
 
