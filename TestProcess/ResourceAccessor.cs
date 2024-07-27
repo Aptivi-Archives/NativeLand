@@ -21,7 +21,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace NativeLand.Tools
+namespace TestProcess
 {
     /// <summary>
     /// A helper class to load resources from an assembly.
